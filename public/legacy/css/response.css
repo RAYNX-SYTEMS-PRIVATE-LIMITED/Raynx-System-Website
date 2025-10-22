@@ -1,0 +1,113 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #eef6ff 0%, #f7fbff 60%, #ffffff 100%);
+    background-attachment: fixed;
+    color: #0b2a3a;
+    font-family: 'Roboto', 'Poppins', sans-serif;
+}
+
+/* Modern Thank You Layout */
+.thankyou-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand h2 {
+    color: #0B95DD;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+/* Card */
+.thankyou-card {
+    background: #ffffff;
+    border: 1px solid #e6eef6;
+    border-radius: 16px;
+    padding: 28px 24px;
+    width: min(560px, 92%);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(16, 40, 70, 0.08);
+}
+
+.icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e6f4ff;
+    color: #0B95DD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px auto;
+}
+
+.icon-circle svg {
+    width: 36px;
+    height: 36px;
+}
+
+.title {
+    font-size: 32px;
+    margin: 8px 0 4px 0;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    color: #083658;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #345269;
+    margin: 0 0 6px 0;
+}
+
+.meta {
+    font-size: 14px;
+    color: #577389;
+    margin: 0 0 18px 0;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #0B95DD;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    background: #097fc1;
+}
+
+.auto-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #577389;
+    text-align: center;
+}

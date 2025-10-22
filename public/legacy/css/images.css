@@ -1,0 +1,102 @@
+html,body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+   overflow:hidden;
+}
+body{
+   background-color: rgb(248, 251, 254);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.part1{
+
+    padding-top:10px;
+    display: flex;  
+}
+.logo{
+   
+    display:inline-block;
+    margin-left: -280px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo a{
+    cursor:pointer;
+ }
+
+.brand{
+    display: flex;
+
+  
+    padding-bottom:-25px;
+    margin-top: 20px;
+    margin-left: 60px;
+
+    text-align: left;
+    width: 400px;
+    position: relative;
+       
+}
+
+
+.head1{
+    margin-left: 312px;
+    margin-top: 50px;
+    margin-bottom: -18px;
+     color: white;
+     font-family: 'Poppins',serif;
+     font-size: 25px;
+}
+
+
+
+ .imgslider {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+
+    
+} 
+
+.slider {
+    position: relative;
+    width: 544px;
+    height: 400px;
+    overflow: hidden;
+   
+   
+    
+}
+
+.slides img {
+    width: 34rem;
+    height: 25rem;
+    display: none;
+}
+
+.slides img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}

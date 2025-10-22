@@ -1,0 +1,309 @@
+import React, { useEffect, useRef } from 'react'
+import '../../public/css/styles.css';
+
+export default function Services() {
+  const rootRef = useRef(null)
+  useEffect(() => {
+    // Trigger enter animations after mount
+    const el = rootRef.current
+    if (!el) return
+    const id = requestAnimationFrame(() => el.classList.add('enter'))
+    return () => cancelAnimationFrame(id)
+  }, [])
+  return (
+    <main className="slider-container" id="services">
+      {/* Logo at top of the Services page */}
+    
+
+      <div ref={rootRef} className="slides-wrapper enterable">
+        {/* Slide 1: Key Products and Services */}
+        <section className="slide animated delay-1" id="slide-1">
+          <div className="slide-content">
+            <div className="text-content">
+              <h2 className="services-title">KEY PRODUCTS<br/>AND SERVICES</h2>
+              <p>
+                At Raynx Systems, we deliver end-to-end IT solutions tailored for modern businesses. Our services
+                include Custom Software Development, Full Stack Web & Mobile App Development, and robust Backend
+                Architecture & APIs. We also build smart, scalable tools using AI & NLP technologies, offer Startup Tech
+                Consulting, and provide Freelance Development Support to help teams scale faster and smarter.
+              </p>
+            </div>
+            <div className="image-content">
+              <img src="/Pictures/keypr1.jfif" alt="Team collaborating on a project" className="main-image1" data-src="/Pictures/keypr1.jfif" />
+              <img src="/Pictures/keypr2.jfif" alt="Team collaborating on a project" className="main-image2" data-src="/Pictures/keypr2.jfif" />
+              <div className="yellow-box"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Slide 2: Market Analysis */}
+        <section className="slide animated delay-2" id="slide-2">
+          <div className="slide-content">
+            <div className="text-content">
+              <h1 className="services-title">MARKET ANALYSIS</h1>
+              <h3 className="services-subtitle highlight-title title-a">Target Audience</h3>
+              <p>
+                We primarily serve startups, SMEs, and tech-driven businesses seeking custom software development, backend
+                architecture, or digital transformation.
+              </p>
+              <h3 className="services-subtitle highlight-title title-b">Current Market Trends</h3>
+              <p>
+                The demand for AI integration, automation tools, and full-stack solutions continues to rise, especially in
+                fast-evolving sectors like EdTech, HealthTech, Retail, and Enterprise SaaS. With the global shift toward
+                remote work, cloud-native systems, and on-demand talent, our agile model aligns perfectly with today’s
+                market needs.
+              </p>
+            </div>
+            <div className="chart-content">
+              <svg className="market-chart" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid meet">
+                <line x1="50" y1="250" x2="480" y2="250" stroke="#335c6d" strokeWidth="1" />
+                <text x="20" y="255" fill="#000" fontSize="12">0</text>
+                <line x1="50" y1="200" x2="480" y2="200" stroke="#335c6d" strokeWidth="1" />
+                <text x="20" y="205" fill="#000" fontSize="12">10</text>
+                <line x1="50" y1="150" x2="480" y2="150" stroke="#335c6d" strokeWidth="1" />
+                <text x="20" y="155" fill="#000" fontSize="12">20</text>
+                <line x1="50" y1="100" x2="480" y2="100" stroke="#335c6d" strokeWidth="1" />
+                <text x="20" y="105" fill="#000" fontSize="12">30</text>
+                <line x1="50" y1="50" x2="480" y2="50" stroke="#335c6d" strokeWidth="1" />
+                <text x="20" y="55" fill="#000" fontSize="12">40</text>
+                <text x="20" y="5" fill="#000" fontSize="12">50</text>
+                <text x="80" y="270" fill="#000" fontSize="12">Item 1</text>
+                <text x="160" y="270" fill="#000" fontSize="12">Item 2</text>
+                <text x="240" y="270" fill="#000" fontSize="12">Item 3</text>
+                <text x="320" y="270" fill="#000" fontSize="12">Item 4</text>
+                <text x="400" y="270" fill="#000" fontSize="12">Item 5</text>
+                <polyline className="chart-line series-1" points="80,250 160,152 240,200 320,102 400,0" />
+                <polyline className="chart-line series-2" points="80,180 160,110 240,150 320,50 400,30" />
+                <polyline className="chart-line series-3" points="80,130 160,250 240,50 320,120 400,80" />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        {/* Slide 3: Business Model */}
+        <section className="slide animated delay-3" id="slide-3">
+          <div className="business-model-content">
+            <div className="business-header">
+              <h1 className="services-title">BUSINESS MODEL</h1>
+              <p>At Raynx Systems, we operate through a dual-mode business model</p>
+            </div>
+            <div className="business-model-container">
+              <div className="business-box">
+                <div className="business-text">
+                  <h3>Core IT Software</h3>
+                  <p>
+                    We build full-cycle web and mobile applications that are scalable, secure, and business-driven,
+                    combining clean architecture with agile delivery to solve real-world problems efficiently and
+                    effectively.
+                  </p>
+                </div>
+                <div className="business-image-wrapper">
+                <img src="/Pictures/core_IT.png" alt="Team working on software" className="business-image" data-src="/Pictures/core_IT.png" />
+                  <div className="yellow-accent"></div>
+                </div>
+              </div>
+              <div className="business-box">
+                <div className="business-text">
+                  <h3>Freelance Partnerships</h3>
+                  <p>
+                    Offering skilled backend/frontend developers for on-demand projects. This model allows us to stay
+                    lean, flexible, and client-focused.
+                  </p>
+                </div>
+                <div className="business-image-wrapper">
+                <img src="/Pictures/businessmodel.png" alt="Freelancer collaborating" className="business-image" data-src="/Pictures/businessmodel.png" />
+                  <div className="yellow-accent"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Core Services (capabilities) */}
+      <section className="animated delay-2">
+        <h2 className="services-title">What We Offer</h2>
+        <div className="services-grid">
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-bezier-curve"/></div>
+            <div>
+              <h4>UI/UX</h4>
+              <p>Designing accessible, modern, and user‑focused interfaces for web and mobile that convert and retain users.</p>
+            </div>
+          </div>
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-code"/></div>
+            <div>
+              <h4>Software Development</h4>
+              <p>End‑to‑end engineering of reliable applications using best practices and modern architectures.</p>
+            </div>
+          </div>
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-network-wired"/></div>
+            <div>
+              <h4>Internet of Things (IoT)</h4>
+              <p>Connect devices and platforms securely to collect, analyze, and act on real‑time data.</p>
+            </div>
+          </div>
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-vial-circle-check"/></div>
+            <div>
+              <h4>Testing Services</h4>
+              <p>Quality engineering as a service—functional, regression, and automation to ship with confidence.</p>
+            </div>
+          </div>
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-chart-pie"/></div>
+            <div>
+              <h4>Data Analytics & Reporting</h4>
+              <p>Transform data into insights with pipelines, dashboards, and decision‑ready reports.</p>
+            </div>
+          </div>
+          <div className="service-item">
+            <div className="service-icon"><i className="fa-solid fa-mobile-screen-button"/></div>
+            <div>
+              <h4>Mobile Applications</h4>
+              <p>Native and cross‑platform apps for iOS and Android—from idea to launch and ongoing support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="service-categories">
+        <h2>Service Categories</h2>
+        <div className="service-categories-grid">
+          <div className="white-card">
+            <h3>Product Development</h3>
+            <p>Custom software, web apps, and mobile apps, built end-to-end with clean architecture.</p>
+          </div>
+          <div className="white-card">
+            <h3>IT Consulting</h3>
+            <p>Technical strategy, solution architecture, scalability planning, and cost optimization.</p>
+          </div>
+          <div className="white-card">
+            <h3>Cloud & DevOps</h3>
+            <p>Deployment, monitoring, automation, CI/CD pipelines, and production support.</p>
+          </div>
+          <div className="white-card">
+            <h3>UI/UX Design</h3>
+            <p>Modern, accessible, and user-focused designs that drive engagement and retention.</p>
+          </div>
+          <div className="white-card">
+            <h3>Maintenance & Support</h3>
+            <p>Continuous improvement, monitoring, bug fixes, and performance enhancements.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Engagement Models */}
+      <section className="engagement-models">
+        <h2>Engagement Models</h2>
+        <div className="engagement-models-grid">
+          <div className="white-card">
+            <h3>Fixed Scope</h3>
+            <p>Well-defined requirements with predictable cost and timeline.</p>
+          </div>
+          <div className="white-card">
+            <h3>Time & Material</h3>
+            <p>Flexible scope and iterative delivery for evolving projects.</p>
+          </div>
+          <div className="white-card">
+            <h3>Dedicated Team</h3>
+            <p>Extended team working alongside your product owners and stakeholders.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Delivery Process */}
+      <section className="delivery-process">
+        <h2>Our Delivery Process</h2>
+        <ol>
+          <li className="white-card">
+            <h4>1. Discover</h4>
+            <p>Workshops, scope, success metrics, and milestones.</p>
+          </li>
+          <li className="white-card">
+            <h4>2. Design</h4>
+            <p>Information architecture, UI/UX prototypes, and technical design.</p>
+          </li>
+          <li className="white-card">
+            <h4>3. Build</h4>
+            <p>Sprints with demos; quality checks; performance & security gates.</p>
+          </li>
+          <li className="white-card">
+            <h4>4. Launch</h4>
+            <p>Release, handover, training, and success monitoring.</p>
+          </li>
+        </ol>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="tech-stack">
+        <h2>Tech Stack</h2>
+        <div className="tech-stack-grid">
+          <div className="white-card">
+            <strong>Frontend</strong>
+            <p>React, Next.js, Vite, TailwindCSS</p>
+          </div>
+          <div className="white-card">
+            <strong>Backend</strong>
+            <p>Node.js, Express, NestJS</p>
+          </div>
+          <div className="white-card">
+            <strong>Database</strong>
+            <p>PostgreSQL, MySQL, MongoDB</p>
+          </div>
+          <div className="white-card">
+            <strong>Cloud & DevOps</strong>
+            <p>AWS, Docker, Kubernetes, CI/CD</p>
+          </div>
+          <div className="white-card">
+            <strong>AI & Data</strong>
+            <p>Python, Transformers, RAG, vector DBs</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section className="industries">
+        <h2>Industries We Serve</h2>
+        <div className="industries-grid">
+          <div className="white-card">SaaS & B2B</div>
+          <div className="white-card">EdTech</div>
+          <div className="white-card">HealthTech</div>
+          <div className="white-card">Retail & E‑commerce</div>
+          <div className="white-card">FinTech</div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="faqs">
+        <h2>FAQs</h2>
+        <div className="faqs-grid">
+          <details className="white-card">
+            <summary>Do you support product-based services and long-term maintenance?</summary>
+            <p>Yes. We partner as a product engineering team and provide continuous support with SLAs.</p>
+          </details>
+          <details className="white-card">
+            <summary>How do you start a new project?</summary>
+            <p>We run a short discovery to align on scope, outcomes, and deliverables, then recommend the best engagement model.</p>
+          </details>
+          <details className="white-card">
+            <summary>Can you integrate AI into existing systems?</summary>
+            <p>We integrate NLP/LLM features (search, classification, summarization) and design safe, measurable rollouts.</p>
+          </details>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div>
+          <h2>Let’s build your product or platform</h2>
+          <p>We provide both services and product-based engagements to help companies and clients ship faster.</p>
+          <a href="/contact" className="primary-btn">Get a quote</a>
+        </div>
+      </section>
+    </main>
+  )
+}
