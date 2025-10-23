@@ -187,7 +187,7 @@ export default function Home() {
                   <span className="tag-mysql">MySQL</span>
                 </div>
                 <Link to="/projects/smart-retail" className="project-link">
-                 Learn more
+                 View Case Study
                 </Link>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function Home() {
                   <span className="tag-mysql">MySQL</span>
                 </div>
                 <Link to="\CustomerSupportTicketing" className="project-link">
-                  Learn more
+                  View Case Study
                 </Link>
               </div>
             </div>

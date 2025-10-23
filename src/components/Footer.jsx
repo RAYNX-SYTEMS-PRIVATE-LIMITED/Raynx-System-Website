@@ -43,7 +43,7 @@ export default function Footer() {
               className="footer-logo"
               style={{ height: '50px', width: 'auto', marginRight: '12px' }}
             />
-            <p className='footer-logo-subtitle' style={{ position: 'absolute', marginTop:'55px', left: '250px', fontSize: '9px', letterSpacing: '2px', color: 'var(--text-dark)' }}> PRIVATE LIMITED</p>
+            <p className='footer-logo-subtitle' style={{ position: 'absolute', marginTop:'55px', left: '250px', fontSize: '9px', letterSpacing: '2px', color: '#fff' }}> PRIVATE LIMITED</p>
           </div>
    
           <p className="footer-tag" style={{
