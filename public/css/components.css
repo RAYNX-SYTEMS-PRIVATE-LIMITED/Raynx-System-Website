@@ -53,6 +53,14 @@
   color: var(--primary-blue);
   transition: font-size 0.3s ease;
 }
+.logo-subtitle{
+      position: absolute;
+    top: 67px;
+    left: 77px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+}
 
 .main-header.scrolled .logo-text {
   font-size: 1.5rem;
