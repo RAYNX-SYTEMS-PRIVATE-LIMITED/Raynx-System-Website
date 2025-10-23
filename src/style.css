@@ -1181,6 +1181,23 @@ p {
   animation: floatWatermark 12s ease-in-out infinite alternate;
   z-index: 0;
 }
+/*card size decrease*/
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  padding-left: 40px;
+  height: auto;              
+  min-height: fit-content;    
+  display: flex;             
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+
 
 @keyframes floatWatermark {
   from { transform: translateY(0) scale(1); opacity: 0.12; }

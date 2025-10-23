@@ -24,8 +24,14 @@ export default function Products() {
     {
       title: 'Smart Retail Inventory & POS System',
       desc: 'Role-based dashboards for Admin, Manager, and Cashier; POS, inventory, suppliers, and reports.',
-      img: '/Pictures/retail_pos.jpg',
+      img: '/Pictures/Smart.jpg',
       to: '/projects/smart-retail'
+    },
+    {
+      title: 'Customer Support Ticketing System ',
+      desc: 'Role-based dashboards for Admin, User, and supporter; Ticketing,Knowledge base.',
+      img: '/Pictures/customer.webp',
+      to: '/projects/customer-support-ticketing'
     },
   ]
 
@@ -45,7 +51,7 @@ export default function Products() {
               {p.to && p.to !== '#' ? (
                 <Link to={p.to} className="primary-btn" style={{display:'inline-block', marginTop:12}}>Learn more</Link>
               ) : (
-                <a href="#" className="primary-btn" style={{display:'inline-block', marginTop:12}}>Learn more</a>
+                <a href="#" className="primary-btn" style={{display:'inline-block', marginTop:12}}>Coming soon</a>
               )}
             </div>
           </div>
