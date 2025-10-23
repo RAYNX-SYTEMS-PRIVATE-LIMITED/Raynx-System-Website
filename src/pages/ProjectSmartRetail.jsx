@@ -58,7 +58,7 @@ export default function ProjectSmartRetail() {
 
       <section id="frontend" className="section">
         <h2>Frontend Pages and Components</h2>
-        <div className="card">
+        <div className="card" style={{paddingLeft:"30px"}}>
           <h3>Login Page</h3>
           <ul>
             <li>Role dropdown (Admin, Manager, Cashier)</li>
@@ -66,6 +66,7 @@ export default function ProjectSmartRetail() {
             <li>Redirect using <span className="mono">useNavigate()</span> to dashboards</li>
           </ul>
           <p><b>Navigation Flow:</b> Admin → <span className="mono">/admin</span>, Cashier → <span className="mono">/cashier</span>, Manager → <span className="mono">/manager</span></p>
+          <img src="/public/Pictures/login(smart).jpg" alt="Login Page" style={{width: '1040px', height: '330px', borderRadius: '8px'}} />
         </div>
       </section>
 
@@ -75,18 +76,22 @@ export default function ProjectSmartRetail() {
           <div className="card">
             <h3>Overview</h3>
             <p>KPI cards and navigation to Manager, Products, Cashiers. Logout returns to Login.</p>
+             <img src="/public/Pictures/overview(smart).png" alt="Overview" style={{width: '320px', height: '260px', marginBottom: '25px'}} />
           </div>
           <div className="card">
             <h3>Products</h3>
             <p>Searchable product list by Name/SKU/Category. Add, edit, deactivate products, manage price/sku/tax/category.</p>
+               <img src="/public/Pictures/products(admin).jpg" alt="products" style={{width: '320px', height: '260px', marginBottom: '25px'}} />
           </div>
           <div className="card">
             <h3>Edit Product</h3>
             <p>Controlled inputs via <span className="mono">useState</span>, toggle active, update stock/reorder. Seamless back navigation.</p>
+               <img src="/public/Pictures/editproduct(admin).jpg" alt="editproduct" style={{width: '320px', height: '260px', marginBottom: '25px'}} />
           </div>
           <div className="card">
             <h3>Add Batch</h3>
             <p>Capture quantity, cost, expiry, created date, and location for batch-level tracking and traceability.</p>
+               <img src="/public/Pictures/addbatch(admin).jpg" alt="Add batch" style={{width: '320px', height: '260px', marginBottom: '25px'}} />
           </div>
         </div>
       </section>
@@ -97,10 +102,12 @@ export default function ProjectSmartRetail() {
           <div className="card">
             <h3>Suppliers</h3>
             <p>Search, add, edit, delete. Maintain vendor records and integrate with purchase orders and inventory updates.</p>
+              <img src="/public/Pictures/supplier(manager).jpg" alt="Supplier" style={{width: '500px', height: '500px', marginBottom: '25px'}} />
           </div>
           <div className="card">
             <h3>Purchase Orders</h3>
             <p>Create and track POs with status: Pending, Approach, Cancel, Received. Update inventory when received.</p>
+              <img src="/public/Pictures/purchase(manager).jpg" alt="Purchase" style={{width: '500px', height: '500px', marginBottom: '25px'}} />
           </div>
         </div>
       </section>
@@ -111,10 +118,12 @@ export default function ProjectSmartRetail() {
           <div className="card">
             <h3>Dashboard</h3>
             <p>Today’s Sales, quick link to POS, and recent transactions with status and totals.</p>
+              <img src="/public/Pictures/cashier(cashier).jpg" alt="cashier" style={{width: '500px', height: '500px', marginBottom: '25px'}} />
           </div>
           <div className="card">
             <h3>POS System</h3>
             <p>Search bar, cart with subtotal/tax/discounts, multiple payment modes, finalize/cancel, cashier info.</p>
+              <img src="/public/Pictures/pos(cashier).jpg" alt="pos" style={{width: '500px', height: '500px', marginBottom: '25px'}} />
           </div>
         </div>
       </section>

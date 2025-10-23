@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import Careers from './pages/Careers'
 import ProjectSmartRetail from './pages/ProjectSmartRetail'
+import CustomerSupportTicketing from './pages/CustomersupportTicketing'
 
 function PageWrap({ children }) {
   const location = useLocation()
@@ -84,6 +85,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/products" element={<Products />} />
             <Route path="/projects/smart-retail" element={<ProjectSmartRetail />} />
+            <Route path="/projects/customer-support-ticketing" element={<CustomerSupportTicketing />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
