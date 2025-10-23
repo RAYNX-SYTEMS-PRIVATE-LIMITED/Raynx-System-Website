@@ -1,41 +1,91 @@
 import React, { useState } from "react";
 
 export default function Careers() {
-  const [showDetails, setShowDetails] = useState(null);
-  const [showPopup, setShowPopup] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
+  const [showFormIndex, setShowFormIndex] = useState(null);
+  const [selectedJob, setSelectedJob] = useState("");
+  const [resumeFile, setResumeFile] = useState(null);
+
+  const handleApplyClick = (index, jobTitle) => {
+    setSelectedJob(jobTitle);
+    setShowFormIndex(showFormIndex === index ? null : index);
+    setResumeFile(null);
+  };
+
+  const handleFileChange = (e) => {
+    setResumeFile(e.target.files[0]);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Application submitted for ${selectedJob}`);
+    setShowFormIndex(null);
+  };
 
   const jobs = [
     {
-      title: "Desktop Engineer",
-      location: "Mumbai",
-      details: {
-        position: "Desktop Engineer (THBS-0052)",
-        experience: "1-3 Years",
-        qualifications: "B.E / B.Tech / Diploma in IT or related field",
-        profile:
-          "Responsible for installation, configuration, and troubleshooting of desktops, laptops, and peripheral devices.",
-      },
-    },
-    {
-      title: "Network Support Engineer",
-      location: "Pune",
-      details: {
-        position: "Network Support Engineer",
-        experience: "2-5 Years",
-        qualifications: "B.E / B.Tech / CCNA Certified preferred",
-        profile:
-          "Manage and maintain network infrastructure, resolve connectivity issues, and ensure uptime.",
-      },
-    },
-    {
-      title: "System Administrator",
+      title: "Frontend Developer",
+      code: "RXS-001",
       location: "Hyderabad",
       details: {
-        position: "System Administrator",
-        experience: "3-6 Years",
-        qualifications: "B.E / B.Tech in Computer Science or IT",
+        position: "Frontend Developer",
+        experience: "1–3 years",
+        qualification: "B.E / B.Tech / MCA in Computer Science or related field",
+        skills: ["React.js", "HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs"],
         profile:
-          "Manage Windows/Linux servers, handle backups, and ensure system performance and security.",
+          "Develop user-friendly web interfaces using React.js and Tailwind CSS. Work with design teams to ensure seamless UX/UI implementation and responsive design.",
+      },
+    },
+    {
+      title: "Backend Developer",
+      code: "RXS-002",
+      location: "Hyderabad",
+      details: {
+        position: "Backend Developer",
+        experience: "2–5 years",
+        qualification: "B.E / B.Tech / MCA",
+        skills: ["Node.js", "Express.js", "MongoDB", "Postman", "JWT"],
+        profile:
+          "Design and maintain REST APIs using Node.js and MongoDB. Ensure scalability, performance, and secure backend infrastructure for production-grade applications.",
+      },
+    },
+    {
+      title: "Full Stack Developer",
+      code: "RXS-003",
+      location: "Hyderabad",
+      details: {
+        position: "Full Stack Developer",
+        experience: "3–6 years",
+        qualification: "B.E / B.Tech / MCA",
+        skills: ["React.js", "Node.js", "MongoDB", "Git", "AWS / Azure"],
+        profile:
+          "Build and manage both frontend and backend components using the MERN stack. Collaborate across teams, implement version control, and deploy scalable apps.",
+      },
+    },
+    {
+      title: "UI/UX Designer",
+      code: "RXS-004",
+      location: "Hyderabad",
+      details: {
+        position: "UI/UX Designer",
+        experience: "1–4 years",
+        qualification: "Any Graduate / Design Certification",
+        skills: ["Figma", "Adobe XD", "Photoshop", "Wireframing", "Prototyping"],
+        profile:
+          "Design engaging user experiences with a focus on usability, accessibility, and modern aesthetics. Collaborate with developers to bring designs to life.",
+      },
+    },
+    {
+      title: "Project Coordinator",
+      code: "RXS-005",
+      location: "Hyderabad",
+      details: {
+        position: "Project Coordinator",
+        experience: "2–4 years",
+        qualification: "MBA / B.E / B.Tech",
+        skills: ["Agile Methodologies", "JIRA", "Scrum", "Documentation", "Team Coordination"],
+        profile:
+          "Oversee project progress, coordinate deliverables, and maintain clear communication among stakeholders. Manage documentation and reporting under Agile frameworks.",
       },
     },
   ];
@@ -53,7 +103,7 @@ export default function Careers() {
     >
       <style>
         {`
-          .fade { animation: fadeIn 1s ease-in-out; }
+          .fade { animation: fadeIn 0.5s ease-in-out; }
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -69,150 +119,184 @@ export default function Careers() {
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             padding: 30px;
           }
-          .job-card {
-            background: #f8fafc;
+          .job-container {
+            background: #fff;
             border: 1px solid #e2e8f0;
+            border-left: 4px solid #1d4ed8;
             border-radius: 12px;
             padding: 20px;
-            transition: 0.3s;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
           }
-          .job-card:hover { background: #e0f2fe; transform: translateY(-5px); }
-          .apply-box {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            color: white;
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 8px 20px rgba(29,78,216,0.3);
+          .job-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+          }
+          .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+          }
+          .job-title::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #1d4ed8;
+            transition: width 0.3s ease;
+          }
+          .job-title:hover::after {
+            width: 100%;
+          }
+          .job-meta {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; margin-top: 8px; color: #475569; font-size: 0.95rem;
+          }
+          .meta-left { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+          .show-details { color: #ef4444; cursor: pointer; font-weight: 500; }
+          .details-box {
+            margin-top: 15px; background: #f9fafb; padding: 15px;
+            border-radius: 8px; border: 1px solid #e2e8f0;
+          }
+          .apply-now {
+            background: #1d4ed8; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600;
+          }
+          .apply-now:hover { background: #2563eb; }
+          .inline-form {
+            margin-top: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+          }
+          .inline-form h3 {
+            color: #1d4ed8;
             text-align: center;
+            margin-bottom: 15px;
           }
-          .btn {
-            background: #2563eb;
+          .inline-form input {
+            width: 100%; padding: 10px; margin-bottom: 10px;
+            border-radius: 8px; border: 1px solid #cbd5e1; outline: none;
+          }
+          .apply-btn {
+            width: 100%; background: #1d4ed8; color: white; padding: 10px;
+            border: none; border-radius: 8px; font-weight: 600; cursor: pointer;
+          }
+          .apply-btn:hover { background: #2563eb; }
+          .apply-email-btn {
+            background: #1d4ed8;
             color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 8px;
-            padding: 8px 16px;
-            margin-top: 10px;
-            cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s;
+            cursor: pointer;
+            margin-top: 20px;
           }
-          .btn:hover { background: #1d4ed8; transform: scale(1.05); }
-          .popup-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-          }
-          .popup {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            width: 400px;
-            max-width: 90%;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            text-align: center;
-          }
-          .popup input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
+          .apply-email-btn:hover {
+            background: #2563eb;
           }
         `}
       </style>
 
       <main style={{ maxWidth: 1100, margin: "0 auto" }}>
-        {/* 🌟 Life at Raynx Systems */}
-        <section
-          className="fade section-card"
-          style={{ textAlign: "center", marginBottom: 50 }}
-        >
-          <h1
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "3rem",
-              marginBottom: 10,
-            }}
-          >
+        {/* 🌟 Life Section */}
+        <section className="fade section-card" style={{ textAlign: "center", marginBottom: 50 }}>
+          <h1 style={{ fontFamily: "Anton, sans-serif", fontSize: "3rem", letterSpacing: 1, marginBottom: 10 }}>
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
-          <p
-            style={{
-              color: "#475569",
-              fontSize: "1.1rem",
-              maxWidth: 850,
-              margin: "0 auto",
-              lineHeight: 1.8,
-            }}
-          >
-            At <strong>Raynx Systems</strong>, we’re not just writing code — we’re
-            crafting innovation. Our culture thrives on{" "}
-            <strong>creativity, collaboration, and continuous learning</strong>.
-            We encourage our team to explore ideas, challenge limits, and build
-            solutions that truly matter. Be part of a growing family that values
-            both <em>innovation</em> and <em>impact</em>.
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}>
+            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, and fostering a
+            culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects,
+            we ensure that innovation and teamwork are at the heart of everything we do.
+          </p>
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}>
+            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>.
+            Join us to build impactful digital solutions while shaping the next wave of technology excellence.
           </p>
         </section>
 
-        {/* 💼 Openings */}
-        <section className="fade" style={{ marginBottom: 60 }}>
-          <h2
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "2.2rem",
-              textAlign: "center",
-              color: "#1d4ed8",
-              marginBottom: 30,
-            }}
-          >
-            Openings
+        {/* 💼 Current Openings */}
+        <section className="fade">
+          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2.2rem", textAlign: "center", color: "#1d4ed8", marginBottom: 30 }}>
+            Current Openings
           </h2>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: 20,
-            }}
-          >
-            {jobs.map((job, index) => (
-              <div key={index} className="job-card">
-                <h3 style={{ color: "#0f172a" }}>{job.title}</h3>
-                <p style={{ color: "#475569", fontSize: "0.9rem" }}>
-                  📍 <strong>Location:</strong> {job.location}
-                </p>
-                <button
-                  className="btn"
-                  onClick={() =>
-                    setShowDetails(showDetails === index ? null : index)
-                  }
-                >
-                  {showDetails === index ? "Hide Details" : "Show Details"}
-                </button>
-                <button
-                  className="btn"
-                  style={{ marginLeft: 10, background: "#16a34a" }}
-                  onClick={() => setShowPopup(true)}
-                >
+          {jobs.map((job, index) => (
+            <div key={index} className="job-container fade">
+              <div className="job-title">{job.title}</div>
+              <div className="job-meta">
+                <div className="meta-left">
+                  <span>💼 Job Code: {job.code}</span>
+                  <span>📍 Location: {job.location}</span>
+                  <span
+                    className="show-details"
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  >
+                    {openIndex === index ? "(hide details)" : "(show details)"}
+                  </span>
+                </div>
+                <button className="apply-now" onClick={() => handleApplyClick(index, job.title)}>
                   Apply Now
                 </button>
-
-                {showDetails === index && (
-                  <div style={{ marginTop: 10, color: "#334155" }}>
-                    <p><strong>Position:</strong> {job.details.position}</p>
-                    <p><strong>Experience:</strong> {job.details.experience}</p>
-                    <p><strong>Qualifications:</strong> {job.details.qualifications}</p>
-                    <p><strong>Job Profile:</strong> {job.details.profile}</p>
-                  </div>
-                )}
               </div>
-            ))}
-          </div>
+
+              {openIndex === index && (
+                <div className="details-box fade">
+                  <p><strong>Position:</strong> {job.details.position}</p>
+                  <p><strong>Experience:</strong> {job.details.experience}</p>
+                  <p><strong>Qualification:</strong> {job.details.qualification}</p>
+                  <p><strong>Skills:</strong> {job.details.skills.join(", ")}</p>
+                  <p><strong>Profile:</strong> {job.details.profile}</p>
+                </div>
+              )}
+
+              {/* Inline Apply Form */}
+              {showFormIndex === index && (
+                <div className="inline-form fade">
+                  <h3>Apply for {selectedJob}</h3>
+                  <form onSubmit={handleSubmit}>
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="email" placeholder="Email Address" required />
+                    <input type="tel" placeholder="Mobile Number" required />
+                    <label>Upload Resume (PDF/DOC)</label>
+                    <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} required />
+                    <button type="submit" className="apply-btn">Submit Application</button>
+                  </form>
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+
+        {/* 📩 How to Apply */}
+        <section className="fade section-card" style={{ textAlign: "center", marginTop: 50 }}>
+          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>
+            How to Apply
+          </h2>
+          <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
+            If you’re passionate about building the future with technology,
+            send your resume to{" "}
+            <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
+              hr@raynxsystems.in
+            </a>.
+          </p>
+
+          <button
+            className="apply-email-btn"
+            onClick={() =>
+              (window.location.href = "mailto:hr@raynxsystems.in?subject=Job%20Application%20-%20Raynx%20Systems")
+            }
+          >
+            Apply via Email
+          </button>
         </section>
 
         {/* 📩 How to Apply */}
@@ -267,3 +351,5 @@ export default function Careers() {
     </div>
   );
 }
+
+
