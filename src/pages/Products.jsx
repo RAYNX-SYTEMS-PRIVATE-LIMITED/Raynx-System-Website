@@ -24,7 +24,7 @@ export default function Products() {
     {
       title: 'Smart Retail Inventory & POS System',
       desc: 'Role-based dashboards for Admin, Manager, and Cashier; POS, inventory, suppliers, and reports.',
-      img: '/Pictures/Smart.jpg',
+      img: '/Pictures/smart.jpg',
       to: '/projects/smart-retail'
     },
     {
