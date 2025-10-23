@@ -1002,8 +1002,8 @@ p {
 }
 .home-main .project-link { display: inline-block; color: var(--primary-blue); font-weight: 600; text-decoration: none; }
 .home-main .project-link:hover { text-decoration:underline;}
-.coming-soon-btn{ border: none; font-weight: 600;}
-.coming-soon-btn:hover{ text-decoration: underline;}
+.coming-soon-btn{ font-size:15px; font-weight: 600; padding:6px; border-radius: 5px;}
+.coming-soon-btn:hover{ text-decoration:none !important;}
 
 @media (max-width: 900px) { .home-main .projects-grid { grid-template-columns: 1fr; } }
 
