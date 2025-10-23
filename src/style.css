@@ -255,7 +255,7 @@ p {
 
 /* About Page Styles */
 .about-section {
-  padding: 80px 20px;
+  padding: 0px 20px;
   background: var(--bg-light);
 }
 
@@ -843,7 +843,7 @@ p {
 
 /* Home page alignment overrides */
 .home-main .about-section {
-  padding: 80px 20px;
+  padding: 10px 20px;
   background: var(--bg-light);
   
   height: auto;
@@ -897,6 +897,7 @@ p {
   display: grid;
   place-items: center;
   margin-bottom: 101px;
+  margin-top:-200px;
 }
 
 .home-main .hero-text-content { text-align: center; }
