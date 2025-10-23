@@ -471,7 +471,7 @@
     .footer-links h4,
     .footer-contact h4,
     .map-container h4 {
-        text-align: center;
+        text-align: left;
     }
 
     .footer-links a {
