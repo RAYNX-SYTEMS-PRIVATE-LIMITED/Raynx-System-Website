@@ -45,7 +45,7 @@
 
 .main-header.scrolled .logo-image {
   height: 40px;
-      margin-left: -38px;
+      margin-left: -10px;
 }
 
 .logo-text {
@@ -57,8 +57,8 @@
 /* Animate PRIVATE LIMITED subtitle */
 .logo-subtitle {
   position: absolute;
-  top: 67px;
-  left: 77px;
+  top: 42px;
+  left: 44px;
   font-size: 9px;
   letter-spacing: 2px;
   color: var(--text-dark);
@@ -77,7 +77,7 @@
 .main-header.scrolled .logo-subtitle {
   opacity: 0.8;
   transform: translateY(0);
-  font-size: 11px;
+  font-size: 9px;
   transition: all 0.3s ease;
 }
 
@@ -151,7 +151,7 @@
 }
 
 /* Mobile nav */
-.nav-links.mobile {
+/* .nav-links.mobile {
   transform: translateY(-100%);
   opacity: 0;
   transition: all 0.3s ease;
@@ -191,7 +191,9 @@
   .menu-toggle {
     display: none;
   }
-}
+} */
+
+
 
 /* App styles */
 .app-container {
@@ -207,7 +209,7 @@
 .page {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page.enter {
@@ -253,7 +255,7 @@ html {
 .enterable .animated {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.3s ease, transform 0.6s ease;
 }
 
 .enterable.enter .animated {
