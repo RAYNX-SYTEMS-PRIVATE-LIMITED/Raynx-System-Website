@@ -298,7 +298,56 @@ export default function Careers() {
             Apply via Email
           </button>
         </section>
+
+        {/* 📩 How to Apply */}
+        <section className="fade apply-box">
+          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>
+            How to Apply
+          </h2>
+          <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
+            If you’re passionate about building the future with technology, we’d love to hear from you.  
+            Send your resume to{" "}
+            <a
+              href="mailto:hr@raynxsystems.in"
+              style={{ color: "#f0f9ff", textDecoration: "underline" }}
+            >
+              hr@raynxsystems.in
+            </a>{" "}
+            with the role you’re applying for in the subject line.
+          </p>
+        </section>
       </main>
+
+      {/* Popup Apply Form */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup fade">
+            <h3 style={{ marginBottom: 15 }}>Apply Now</h3>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="tel" placeholder="Mobile Number" />
+            <input type="text" placeholder="Enter Captcha" />
+            <button
+              className="btn"
+              style={{ width: "100%", background: "#2563eb" }}
+              onClick={() => setShowPopup(false)}
+            >
+              Apply
+            </button>
+            <button
+              className="btn"
+              style={{
+                background: "#ef4444",
+                marginTop: 10,
+                width: "100%",
+              }}
+              onClick={() => setShowPopup(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

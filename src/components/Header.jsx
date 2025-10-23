@@ -25,14 +25,16 @@ export default function Header() {
         <div className="navbar-content">
           <div className="logo">
             <Link to="/" className="skip-link">
+              
+              <span className="logo-text">
+                Raynx Systems
+              </span>
               <img
                 src="/Pictures/bluelogo.png"
                 alt="Raynx Systems Logo"
                 className="logo-image"
-              />
-              <span className="logo-text">
-                Raynx Systems
-              </span>
+              /> 
+              <p className="logo-subtitle">PRIVATE LIMITED</p>
             </Link>
           </div>
           <div
@@ -54,7 +56,7 @@ export default function Header() {
             { to: '/about', label: 'About' },
             { to: '/careers', label: 'Careers' },
             { to: '/contact', label: 'Contact' },
-            { to: '/blog', label: 'Blog' }
+           
           ].map(({ to, label }) => (
             <li key={to}>
               <Link
