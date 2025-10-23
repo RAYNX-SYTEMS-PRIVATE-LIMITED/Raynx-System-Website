@@ -70,11 +70,11 @@ export default function Home() {
         </main>
 
         {/* Animated scroll indicator */}
-        {/* <div className="scroll-indicator">
+        <div className="scroll-indicator">
           <div className="scroll-mouse">
             <div className="scroll-wheel"></div>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* About summary */}
@@ -169,9 +169,9 @@ export default function Home() {
             <div className="project-card">
               <div className="project-image-container">
                 <img
-                  src="/Pictures/serviceimg1.png"
+                  src="/Pictures/smart.jpg"
                   alt="Smart Retail System"
-                  data-src="/Pictures/serviceimg1.png"
+                  data-src="/Pictures/smart.jpg"
                 />
                 <div className="project-badge">Featured</div>
               </div>
@@ -187,10 +187,36 @@ export default function Home() {
                   <span className="tag-mysql">MySQL</span>
                 </div>
                 <Link to="/projects/smart-retail" className="project-link">
-                  View Case Study
+                 Learn more
                 </Link>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="project-image-container">
+                <img
+                  src="/Pictures/customerSupport.jpg"
+                  alt="Smart Retail System"
+                  data-src="/Pictures/customerSupport.jpg"
+                />
+                <div className="project-badge">Featured</div>
+              </div>
+              <div className="project-content">
+                <h3 className="project-title">Customer Support Ticketing System</h3>
+                <p className="project-description">
+                  Role-based dashboards for Admin, User, and supporter; Ticketing,Knowledge base.
+                </p>
+                <div className="project-tags">
+                  <span className="tag-react">React</span>
+                  <span className="tag-nodejs">Node.js</span>
+                  <span className="tag-mysql">MySQL</span>
+                </div>
+                <Link to="\CustomerSupportTicketing" className="project-link">
+                  Learn more
+                </Link>
+              </div>
+            </div>
+
 
             {/* Additional project placeholders */}
             <div className="project-card coming-soon">
@@ -234,19 +260,19 @@ export default function Home() {
               {
                 quote: "Raynx Systems transformed our retail operations with their innovative Smart POS system. The implementation was seamless and the results exceeded our expectations.",
                 author: "Rajesh Kumar",
-                position: "CEO, Modern Mart",
+                // position: "CEO, Modern Mart",
                 rating: 5
               },
               {
                 quote: "Professional team with outstanding technical expertise. They delivered a custom web platform that perfectly matched our business requirements.",
                 author: "Priya Sharma",
-                position: "CTO, TechStart Solutions",
+                // position: "CTO, TechStart Solutions",
                 rating: 5
               },
               {
                 quote: "The automation solutions provided by Raynx Systems have significantly improved our operational efficiency. Highly recommended!",
                 author: "Amit Patel",
-                position: "Operations Manager, Indus Corp",
+                // position: "Operations Manager, Indus Corp",
                 rating: 5
               }
             ].map((testimonial, index) => (
