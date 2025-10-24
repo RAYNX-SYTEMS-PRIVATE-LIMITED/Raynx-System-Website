@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Careers() {
   const [openIndex, setOpenIndex] = useState(null);
   const [showFormIndex, setShowFormIndex] = useState(null);
   const [selectedJob, setSelectedJob] = useState("");
   const [resumeFile, setResumeFile] = useState(null);
+  const [applyVisible, setApplyVisible] = useState(false);
 
-  // Added missing state to fix the error
-  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    // Trigger animation for "How to Apply" after component mounts
+    const timer = setTimeout(() => setApplyVisible(true), 600);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleApplyClick = (index, jobTitle) => {
     setSelectedJob(jobTitle);
@@ -106,34 +110,119 @@ export default function Careers() {
     >
       <style>
         {`
-          .fade { animation: fadeIn 0.5s ease-in-out; }
-          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-          .highlight { background: linear-gradient(90deg, #2563eb, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-          .section-card { background: white; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 30px; }
-          .job-container { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid #1d4ed8; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-          .job-container:hover { transform: translateY(-4px); box-shadow: 0 6px 14px rgba(0,0,0,0.1); }
-          .job-title { font-size: 1.3rem; font-weight: 600; color: #1d4ed8; position: relative; display: inline-block; cursor: pointer; }
-          .job-title::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 0%; height: 2px; background-color: #1d4ed8; transition: width 0.3s ease; }
-          .job-title:hover::after { width: 100%; }
+          /* Fade-in animation */
+          .fade { animation: fadeIn 0.6s ease-in-out; }
+          @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+          /* Life section hover (light colors) */
+          .life-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            transition: background 0.5s ease, transform 0.8s ease, box-shadow 0.4s ease, color 0.4s ease;
+          }
+          .life-card:hover {
+            background: linear-gradient(135deg, #d3e8f5ff, #97bed5ff);
+            color: #1e3a8a;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(147,197,253,0.4);
+          }
+
+          /* Job container hover animation */
+          .job-container {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #1d4ed8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          .job-container:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+          }
+
+          .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            position: relative;
+            display: inline-block;
+          }
+          .job-title::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #1d4ed8;
+            transition: width 0.3s ease;
+          }
+          .job-container:hover .job-title::after { width: 100%; }
+
           .job-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px; color: #475569; font-size: 0.95rem; }
           .meta-left { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
           .show-details { color: #ef4444; cursor: pointer; font-weight: 500; }
           .details-box { margin-top: 15px; background: #f9fafb; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; }
-          .apply-now { background: #1d4ed8; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
+          .apply-now { background: #1d4ed8; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background 0.3s ease; }
           .apply-now:hover { background: #2563eb; }
+
           .inline-form { margin-top: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 20px; }
           .inline-form h3 { color: #1d4ed8; text-align: center; margin-bottom: 15px; }
           .inline-form input { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none; }
-          .apply-btn { width: 100%; background: #1d4ed8; color: white; padding: 10px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+          .apply-btn { width: 100%; background: #1d4ed8; color: white; padding: 10px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; }
           .apply-btn:hover { background: #2563eb; }
-          .apply-email-btn { background: #1d4ed8; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 20px; }
-          .apply-email-btn:hover { background: #2563eb; }
+
+          /* How to Apply Section Animation */
+          .apply-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            transition: all 0.8s ease-in-out;
+          }
+          .apply-section.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            animation: bounceIn 1s ease;
+          }
+          @keyframes bounceIn {
+            0% { transform: translateY(40px); opacity: 0; }
+            60% { transform: translateY(-10px); opacity: 1; }
+            80% { transform: translateY(5px); }
+            100% { transform: translateY(0); }
+          }
+
+          /* Apply button hover animation */
+          .apply-email-btn {
+            background: #1d4ed8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.4s ease;
+          }
+          .apply-email-btn:hover {
+            background: #2563eb;
+            box-shadow: 0 0 12px rgba(37,99,235,0.5);
+            transform: translateY(-3px);
+          }
         `}
       </style>
 
       <main style={{ maxWidth: 1100, margin: "0 auto" }}>
-        {/* Life Section */}
-        <section className="fade section-card" style={{ textAlign: "center", marginBottom: 50 }}>
+        {/* Life at Raynx Systems Section */}
+        <section className="fade life-card" style={{ textAlign: "center", marginBottom: 50 }}>
           <h1 style={{ fontFamily: "Anton, sans-serif", fontSize: "3rem", letterSpacing: 1, marginBottom: 10 }}>
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
@@ -150,6 +239,7 @@ export default function Careers() {
           <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2.2rem", textAlign: "center", color: "#1d4ed8", marginBottom: 30 }}>
             Current Openings
           </h2>
+
           {jobs.map((job, index) => (
             <div key={index} className="job-container fade">
               <div className="job-title">{job.title}</div>
@@ -157,11 +247,19 @@ export default function Careers() {
                 <div className="meta-left">
                   <span>💼 Job Code: {job.code}</span>
                   <span>📍 Location: {job.location}</span>
-                  <span className="show-details" onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+                  <span
+                    className="show-details"
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  >
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
                 </div>
-                <button className="apply-now" onClick={() => handleApplyClick(index, job.title)}>Apply Now</button>
+                <button
+                  className="apply-now"
+                  onClick={() => handleApplyClick(index, job.title)}
+                >
+                  Apply Now
+                </button>
               </div>
 
               {openIndex === index && (
@@ -182,8 +280,15 @@ export default function Careers() {
                     <input type="email" placeholder="Email Address" required />
                     <input type="tel" placeholder="Mobile Number" required />
                     <label>Upload Resume (PDF/DOC)</label>
-                    <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} required />
-                    <button type="submit" className="apply-btn">Submit Application</button>
+                    <input
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      onChange={handleFileChange}
+                      required
+                    />
+                    <button type="submit" className="apply-btn">
+                      Submit Application
+                    </button>
                   </form>
                 </div>
               )}
@@ -191,34 +296,39 @@ export default function Careers() {
           ))}
         </section>
 
-        {/* How to Apply */}
-        <section className="fade section-card" style={{ textAlign: "center", marginTop: 50 }}>
-          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>How to Apply</h2>
+        {/* How to Apply Section with Animation */}
+        <section
+          className={`apply-section fade ${applyVisible ? "visible" : ""}`}
+          style={{ textAlign: "center", marginTop: 50 }}
+        >
+          <h2
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontSize: "2rem",
+              marginBottom: 12,
+            }}
+          >
+            How to Apply
+          </h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
             If you’re passionate about building the future with technology, send your resume to{" "}
-            <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
+            <a
+              href="mailto:hr@raynxsystems.in"
+              style={{ color: "#1d4ed8", textDecoration: "underline" }}
+            >
               hr@raynxsystems.in
             </a>.
           </p>
-          <button className="apply-email-btn" onClick={() => window.location.href="mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems"}>
+          <button
+            className="apply-email-btn"
+            onClick={() =>
+              (window.location.href =
+                "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
+            }
+          >
             Apply via Email
           </button>
         </section>
-
-        {/* Popup Apply Form */}
-        {showPopup && (
-          <div className="popup-overlay">
-            <div className="popup fade">
-              <h3 style={{ marginBottom: 15 }}>Apply Now</h3>
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Mobile Number" />
-              <input type="text" placeholder="Enter Captcha" />
-              <button className="btn" style={{ width: "100%", background: "#2563eb" }} onClick={() => setShowPopup(false)}>Apply</button>
-              <button className="btn" style={{ width: "100%", marginTop: 10, background: "#ef4444" }} onClick={() => setShowPopup(false)}>Close</button>
-            </div>
-          </div>
-        )}
       </main>
     </div>
   );

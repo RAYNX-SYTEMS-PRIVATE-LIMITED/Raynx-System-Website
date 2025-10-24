@@ -425,10 +425,11 @@ export default function About() {
               Building smart solutions that power tomorrow.
             </blockquote>
             <p style={{ color: "#334155" }}>
-              MBA graduate with over a decade of experience in education,
-              training, and program management. He leads Raynx Systems with a
-              product-first mindset—focusing on outcomes, velocity, and customer
-              success.
+             At the heart of Raynx Systems Pvt. Ltd. is Pathlavath Chender, a visionary leader driven by a passion for innovation and technology. As the Founder and CEO, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
+             
+            <p style={{ color: "#334155" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+
+            <p style={{ color: "#334155" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
             </p>
             <p style={{ marginTop: 12 }}>
               <a
@@ -476,7 +477,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. BODA VENKANNA NAYAK
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co.Founder</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Finance</p>
             </div>
           </div>
           <div className="profile-text">
@@ -549,7 +550,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. AMBATI THIRUPATHI GOUD
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co.Founder</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Administrator</p>
             </div>
           </div>
           <div className="profile-text">
@@ -585,7 +586,7 @@ export default function About() {
       </section>
 
       {/* Life at Raynx Systems (Gallery) */}
-      <section id="company-gallery">
+      <section id="company-gallery" style={{ padding: "40px 20px",}}>
         <h2 className="sec">Life at Raynx Systems</h2>
         <div className="scroll-gallery">
           <div className="scroll-track">

@@ -29,14 +29,14 @@ export default function Header() {
             <Link to="/" className="skip-link">
               
               <span className="logo-text">
-                Raynx Systems
+                
               </span>
               <img
                 src="/Pictures/bluelogo.png"
                 alt="Raynx Systems Logo"
                 className="logo-image"
               /> 
-              <p className="logo-subtitle">PRIVATE LIMITED</p>
+              
             </Link>
           </div>
           <div

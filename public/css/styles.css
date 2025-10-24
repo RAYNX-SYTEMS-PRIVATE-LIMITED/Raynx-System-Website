@@ -290,13 +290,13 @@ h6 {
 
   /* Style for your logo image */
   .logo-image {
-    height: 40px;
-    width: auto;
+    height: 50px;
+    width: 170px;
     letter-spacing: 1px;
     color: #0B95DD;
     font-family: 'Poppins', serif;
     position: absolute;
-    left: 140px;
+    left: 0px;
   }
 
   .logo-text {
