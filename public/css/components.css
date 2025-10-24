@@ -44,8 +44,9 @@
 }
 
 .main-header.scrolled .logo-image {
-  height: 40px;
-      margin-left: -38px;
+  height: 50px;
+  width: 180px;
+      margin-left: -15px;
 }
 
 .logo-text {
