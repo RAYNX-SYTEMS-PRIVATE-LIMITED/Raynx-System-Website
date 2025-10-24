@@ -609,6 +609,7 @@ box-shadow: 1px 2px 5px lightslategray;
 }
 
 /* Responsive */
+
 @media (max-width: 900px) {
   .services-grid {
     grid-template-columns: 1fr;
@@ -639,4 +640,6 @@ box-shadow: 1px 2px 5px lightslategray;
   .business-model-container {
     grid-template-columns: 1fr;
   }
+ 
 }
+

@@ -1,18 +1,15 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion";
 
 export default function Home() {
   const heroRef = useRef(null)
   const statsRef = useRef(null)
 
   useEffect(() => {
-    // Animate hero text on load
     const hero = heroRef.current
-    if (hero) {
-      hero.classList.add('fade-in-up')
-    }
+    if (hero) hero.classList.add('fade-in-up')
 
-    // Animate stats counter
     const stats = statsRef.current
     if (stats) {
       const observer = new IntersectionObserver((entries) => {
@@ -34,7 +31,6 @@ export default function Home() {
       const duration = 2000
       const step = target / (duration / 16)
       let current = 0
-
       const timer = setInterval(() => {
         current += step
         if (current >= target) {
@@ -47,73 +43,114 @@ export default function Home() {
     })
   }
 
+  // Common animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  }
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8 } }
+  }
+
+  const containerStagger = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 }
+    }
+  }
+
   return (
     <main className="home-main">
       {/* Hero Section */}
-      <div className="hero-container" id="home">
+      <motion.div
+        className="hero-container"
+        id="home"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
         <div className="hero-background"></div>
 
-        <main className="hero-section">
-          <div className="hero-text-content" ref={heroRef}>
-           
-            <h1 className="hero-title">
+        <motion.main
+          className="hero-section"
+          ref={heroRef}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="hero-text-content" variants={containerStagger}>
+            <motion.h1 className="hero-title" variants={fadeUp}>
               <span className="hero-title-raynx">RAYNX SYSTEMS</span>
-              {/* <span className="hero-title-systems">SYSTEMS</span> */}
-            </h1>
-            <p className="hero-subtitle">PRIVATE LIMITED</p>
-            <p className="hero-tagline">Empowering businesses through innovation and technology.</p>
-            <div className="hero-buttons">
+            </motion.h1>
+            <motion.p className="hero-subtitle" variants={fadeUp}>
+              PRIVATE LIMITED
+            </motion.p>
+            <motion.p className="hero-tagline" variants={fadeUp}>
+              Empowering businesses through innovation and technology.
+            </motion.p>
+            <motion.div className="hero-buttons" variants={fadeUp}>
               <Link to="/services" className="hero-primary-btn">Our Services</Link>
               <Link to="/contact" className="hero-secondary-btn">Get Started</Link>
-            </div>
-          </div>
-        </main>
+            </motion.div>
+          </motion.div>
+        </motion.main>
 
-        {/* Animated scroll indicator */}
-        <div className="scroll-indicator">
+        {/* Scroll Indicator */}
+        <motion.div
+          className="scroll-indicator"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}
+        >
           <div className="scroll-mouse">
             <div className="scroll-wheel"></div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* About summary */}
-      <section className="about-section" id="about">
+      {/* About Section */}
+      <motion.section
+        className="about-section"
+        id="about"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerStagger}
+      >
         <div className="about-container">
-          <div className="about-img slide-in-left">
-            <img
-              src="/Pictures/newimage1.jpg"
-              alt="Team working"
-              data-src="/Pictures/newimage1.jpg"
-            />
-            
-          </div>
-          <div className="about-text slide-in-right">
-            <h2 className="about-title">
-              ABOUT US
-            </h2>
+          <motion.div className="about-img" variants={fadeUp}>
+            <img src="/Pictures/newimage1.jpg" alt="Team working" />
+          </motion.div>
+          <motion.div className="about-text" variants={fadeUp}>
+            <h2 className="about-title">ABOUT US</h2>
             <p className="about-description">
               Raynx Systems delivers high-quality, scalable, and customized software solutions.
               We build web platforms, enterprise tools, and automation systems that solve real-world problems.
-              Our team of experts combines technical excellence with business acumen to deliver
+              Our team combines technical excellence with business acumen to deliver
               innovative solutions that drive growth and efficiency.
             </p>
-            
             <Link to="/about" className="primary-btn">Learn More About Us</Link>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Services Overview */}
-      <section className="services-section">
-        <div className="services-container">
-          <h2 className="services-title">
-            Our Services
-          </h2>
-          <p className="services-description">
+      {/* Services Section */}
+      <motion.section
+        className="services-section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerStagger}
+      >
+        <motion.div className="services-container" variants={fadeUp}>
+          <motion.h2 className="services-title" variants={fadeUp}>Our Services</motion.h2>
+          <motion.p className="services-description" variants={fadeUp}>
             Comprehensive technology solutions tailored to transform your business operations
-          </p>
-          <div className="services-grid">
+          </motion.p>
+
+          <motion.div className="services-grid" variants={containerStagger}>
             {[
               {
                 icon: 'fa-code',
@@ -134,186 +171,94 @@ export default function Home() {
                 color: '#059669'
               }
             ].map((service, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="service-card"
-                data-delay={`${index * 0.2}s`}
+                variants={fadeUp}
+                transition={{ delay: index * 0.2 }}
               >
-                <div
-                  className="service-icon"
-                  data-color={service.color}
-                >
+                <div className="service-icon" data-color={service.color}>
                   <i className={`fa-solid ${service.icon}`}></i>
                 </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <div className="services-cta">
+          </motion.div>
+
+          <motion.div className="services-cta" variants={fadeUp}>
             <Link to="/services" className="secondary-btn">View All Services</Link>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
       {/* Projects/Work Area */}
-      <section className="projects-section">
-        <div className="projects-container">
-          <h2 className="projects-title">
-            Our Projects
-          </h2>
-          <p className="projects-description">
-            Showcasing our expertise in delivering innovative solutions across industries
-          </p>
-          <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-image-container">
-                <img
-                  src="/Pictures/smart.jpg"
-                  alt="Smart Retail System"
-                  data-src="/Pictures/smart.jpg"
-                />
-                <div className="project-badge">Featured</div>
-              </div>
-              <div className="project-content">
-                <h3 className="project-title">Smart Retail Inventory & POS System</h3>
-                <p className="project-description">
-                  A comprehensive retail management solution with role-based dashboards for Admin, Manager, and Cashier.
-                  Features real-time inventory tracking, sales analytics, and automated reporting.
-                </p>
-                <div className="project-tags">
-                  <span className="tag-react">React</span>
-                  <span className="tag-nodejs">Node.js</span>
-                  <span className="tag-mysql">MySQL</span>
-                </div>
-                <Link to="/projects/smart-retail" className="project-link">
-                 View Case Study
-                </Link>
-              </div>
-            </div>
+      <motion.section className="projects-section"> <div className="projects-container"> <h2 className="projects-title"> Our Projects </h2> <p className="projects-description"> Showcasing our expertise in delivering innovative solutions across industries </p> <div className="projects-grid"> <div className="project-card"> <div className="project-image-container"> <img src="/Pictures/smart.jpg" alt="Smart Retail System" data-src="/Pictures/smart.jpg" /> <div className="project-badge">Featured</div> </div> <div className="project-content"> <h3 className="project-title">Smart Retail Inventory & POS System</h3> <p className="project-description"> A comprehensive retail management solution with role-based dashboards for Admin, Manager, and Cashier. Features real-time inventory tracking, sales analytics, and automated reporting. </p> <div className="project-tags"> <span className="tag-react">React</span> <span className="tag-nodejs">Node.js</span> <span className="tag-mysql">MySQL</span> </div> <Link to="/projects/smart-retail" className="project-link"> View Case Study </Link> </div> </div> <div className="project-card"> <div className="project-image-container"> <img src="/Pictures/customerSupport.jpg" alt="Smart Retail System" data-src="/Pictures/customerSupport.jpg" /> <div className="project-badge">Featured</div> </div> <div className="project-content"> <h3 className="project-title">Customer Support Ticketing System</h3> <p className="project-description"> Role-based dashboards for Admin, User, and supporter; Ticketing,Knowledge base. </p> <div className="project-tags"> <span className="tag-react">React</span> <span className="tag-nodejs">Node.js</span> <span className="tag-mysql">MySQL</span> </div> <Link to="\CustomerSupportTicketing" className="project-link"> View Case Study </Link> </div> </div> {/* Additional project placeholders */} <div className="project-card coming-soon"> <div className="project-image-container"> <img src="/Pictures/keypr1.jfif" alt="Workflow Automation" data-src="/Pictures/keypr1.jfif" /> <div className="project-badge coming-soon">Coming Soon</div> </div> <div className="project-content"> <h3 className="project-title">Workflow Automation Suite</h3> <p className="project-description"> Intelligent workflow automation platform designed to streamline business processes and improve operational efficiency across departments. </p> <div className="project-tags"> <span className="tag-python">Python</span> <span className="tag-aiml">AI/ML</span> </div> <button className="project-link coming-soon-btn" disabled> Coming Soon </button> </div> </div> </div> </div> </motion.section>
 
-            <div className="project-card">
-              <div className="project-image-container">
-                <img
-                  src="/Pictures/customerSupport.jpg"
-                  alt="Smart Retail System"
-                  data-src="/Pictures/customerSupport.jpg"
-                />
-                <div className="project-badge">Featured</div>
-              </div>
-              <div className="project-content">
-                <h3 className="project-title">Customer Support Ticketing System</h3>
-                <p className="project-description">
-                  Role-based dashboards for Admin, User, and supporter; Ticketing,Knowledge base.
-                </p>
-                <div className="project-tags">
-                  <span className="tag-react">React</span>
-                  <span className="tag-nodejs">Node.js</span>
-                  <span className="tag-mysql">MySQL</span>
-                </div>
-                <Link to="\CustomerSupportTicketing" className="project-link">
-                  View Case Study
-                </Link>
-              </div>
-            </div>
-
-
-            {/* Additional project placeholders */}
-            <div className="project-card coming-soon">
-              <div className="project-image-container">
-                <img
-                  src="/Pictures/keypr1.jfif"
-                  alt="Workflow Automation"
-                  data-src="/Pictures/keypr1.jfif"
-                />
-                <div className="project-badge coming-soon">Coming Soon</div>
-              </div>
-              <div className="project-content">
-                <h3 className="project-title">Workflow Automation Suite</h3>
-                <p className="project-description">
-                  Intelligent workflow automation platform designed to streamline business processes
-                  and improve operational efficiency across departments.
-                </p>
-                <div className="project-tags">
-                  <span className="tag-python">Python</span>
-                  <span className="tag-aiml">AI/ML</span>
-                </div>
-                <button className="project-link coming-soon-btn" disabled>
-                  Coming Soon
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     
-
-      {/* Testimonials */}
-      <section className="testimonials-section">
+      {/* Testimonials Section */}
+      <motion.section
+        className="testimonials-section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerStagger}
+      >
         <div className="testimonials-container">
-          <h2 className="testimonials-title">
+          <motion.h2 className="testimonials-title" variants={fadeUp}>
             What Our Clients Say
-          </h2>
-          <div className="testimonials-grid">
+          </motion.h2>
+
+          <motion.div className="testimonials-grid" variants={containerStagger}>
             {[
               {
-                quote: "Raynx Systems transformed our retail operations with their innovative Smart POS system. The implementation was seamless and the results exceeded our expectations.",
+                quote: "Raynx Systems transformed our retail operations with their innovative Smart POS system.",
                 author: "Rajesh Kumar",
-                // position: "CEO, Modern Mart",
                 rating: 5
               },
               {
-                quote: "Professional team with outstanding technical expertise. They delivered a custom web platform that perfectly matched our business requirements.",
+                quote: "Professional team with outstanding technical expertise.",
                 author: "Priya Sharma",
-                // position: "CTO, TechStart Solutions",
                 rating: 5
               },
               {
-                quote: "The automation solutions provided by Raynx Systems have significantly improved our operational efficiency. Highly recommended!",
+                quote: "The automation solutions have significantly improved our efficiency.",
                 author: "Amit Patel",
-                // position: "Operations Manager, Indus Corp",
                 rating: 5
               }
-            ].map((testimonial, index) => (
-              <div key={index} className="testimonial-card" data-delay={`${index * 0.2}s`}>
+            ].map((t, i) => (
+              <motion.div key={i} className="testimonial-card" variants={fadeUp}>
                 <div className="testimonial-rating">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(t.rating)].map((_, i) => (
                     <i key={i} className="fa-solid fa-star"></i>
                   ))}
                 </div>
-                <blockquote className="testimonial-quote">
-                  "{testimonial.quote}"
-                </blockquote>
-                <div className="testimonial-author">
-                  <h4>{testimonial.author}</h4>
-                  <p>{testimonial.position}</p>
-                </div>
-              </div>
+                <blockquote className="testimonial-quote">"{t.quote}"</blockquote>
+                <div className="testimonial-author"><h4>{t.author}</h4></div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* CTA */}
-      <section className="cta-section">
+      {/* CTA Section */}
+      <motion.section
+        className="cta-section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+      >
         <div className="cta-container">
           <h2 className="cta-title">Ready to Innovate?</h2>
           <p className="cta-description">
             Let's discuss how we can help your business grow with cutting-edge technology solutions.
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="cta-primary-btn">
-              Start Your Project
-            </Link>
-            <Link to="/services" className="cta-secondary-btn">
-              View Services
-            </Link>
+            <Link to="/contact" className="cta-primary-btn">Start Your Project</Link>
+            <Link to="/services" className="cta-secondary-btn">View Services</Link>
           </div>
         </div>
-      </section>
-
-
+      </motion.section>
     </main>
   )
 }
