@@ -283,7 +283,7 @@ export default function Services() {
       {/* Delivery Process */}
       <section className="delivery-process">
         <h2>Our Delivery Process</h2>
-        <ol class="animate__animated animate__bounceInLeft">
+        <ol >
           <li className="white-card" >
             <h4>1. Discover</h4>
             <p>Workshops, scope, success metrics, and milestones.</p>
@@ -311,32 +311,127 @@ export default function Services() {
       {/* Tech Stack */}
       <section className="tech-stack">
         <h2>Tech Stack</h2>
-        <div className="tech-stack-grid">
-          <div className="white-card">
+        <div className="tech-stack-grid1">
+          <div className="white-card2">
             <strong>Frontend</strong>
-            <p>React, Next.js, Vite, TailwindCSS</p>
+            <ol>
+              <li>
+                <img src="../../public/Pictures/react.jpg" alt="" />
+                <p>React js</p>
+              </li>
+              <li>
+                <img src="../../public/Pictures/nextjs.jpg" alt="" />
+                <p>Next js</p>
+              </li>
+
+              <li>
+                <img src="../../public/Pictures/tailwindcss.jpg" alt="" />
+                <p>Tailwind css</p>
+              </li>
+            </ol>
+
           </div>
-          <div className="white-card">
+          <div className="white-card2">
             <strong>Backend</strong>
-            <p>Java, SpringBoot, Django, Node.js, Express, NestJS</p>
-          </div>
-          <div className="white-card">
-            <strong>Database</strong>
-            <p>PostgreSQL, MySQL, MongoDB</p>
-          </div>
-          <div className="white-card">
-            <strong>Cloud & DevOps</strong>
-            <p>AWS, Docker, Kubernetes, CI/CD</p>
-          </div>
-          <div className="white-card">
-            <strong>AI & Data</strong>
-            <p>Python, Transformers, RAG, vector DBs</p>
+            <ol>
+              <li>
+                <img src="../../public/Pictures/java.jpg" alt="" />
+                <p>Java</p>
+              </li>
+              <li>
+                <img src="../../public/Pictures/springboot.jpg" alt="" />
+                <p>SpringBoot</p>
+              </li>
+
+              <li>
+                <img src="../../public/Pictures/django.jpg" alt="" />
+                <p>Django</p>
+              </li>
+
+              <li>
+                <img src="../../public/Pictures/expressjs.jpg" alt="" />
+                <p>Express js</p>
+              </li>
+
+
+            </ol>
           </div>
         </div>
-      </section>
 
-      {/* Industries */}
-      {/* <section className="industries">
+        <div className="tech-stack-grid2">
+
+          <div className="white-card2">
+            <strong>Database</strong>
+            <ol>
+              <li>
+                <img src="../../public/Pictures/postgresql.jpg" alt="" />
+                <p>PostgreSQL</p>
+              </li>
+              <li>
+                <img src="../../public/Pictures/mysql.jpg" alt="" />
+                <p>MySQL</p>
+              </li>
+
+              <li>
+                <img src="../../public/Pictures/mongodb.jpg" alt="" />
+                <p>MongoDB</p>
+              </li>
+            </ol>
+          </div>
+          <div className="white-card2">
+            <strong>Cloud & DevOps</strong>
+            <ol>
+              <li>
+                <img src="../../public/Pictures/aws.jpg" alt="" />
+                <p>AWS</p>
+              </li>
+              <li>
+                <img src="../../public/Pictures/docker.png" alt="" />
+                <p>Docker</p>
+              </li>
+
+              <li>
+                <img src="../../public/Pictures/kubernets.png" alt="" />
+                <p>Kubernetes</p>
+              </li>
+              <li>
+                <img src="../../public/Pictures/cicd.png" alt="" />
+                <p>CI/CD</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className="tech-stack-grid3">
+          <div className="white-card2">
+            <strong>AI & Data</strong>
+            <ol>
+              <li>
+                <img src="../../public/Pictures/python.png" alt="" />
+                <p>Python</p>
+              </li>
+              <li>
+                {/* <img src="../../public/Pictures/nextjs.jpg" alt="" /> */}
+                <p>Transformers</p>
+              </li>
+
+              <li>
+                {/* <img src="../../public/Pictures/tailwindcss.jpg" alt="" /> */}
+                <p>RAG</p>
+              </li>
+
+              <li>
+                {/* <img src="../../public/Pictures/tailwindcss.jpg" alt="" /> */}
+                <p>vector DBs</p>
+              </li>
+            </ol>
+
+          </div>
+      </div>
+      </section >
+
+    {/* Industries */ }
+  {/* <section className="industries">
         <h2>Industries We Serve</h2>
         <div className="industries-grid">
           <div className="white-card">SaaS & B2B</div>
@@ -347,49 +442,49 @@ export default function Services() {
         </div>
       </section> */}
 
-      {/* FAQs */}
-      <section className="faqs">
-        <h2>FAQs</h2>
-        <div className="faqs-grid">
-          <details className="white-card">
-            <summary>
-              Do you support product-based services and long-term maintenance?
-            </summary>
-            <p>
-              Yes. We partner as a product engineering team and provide
-              continuous support with SLAs.
-            </p>
-          </details>
-          <details className="white-card">
-            <summary>How do you start a new project?</summary>
-            <p>
-              We run a short discovery to align on scope, outcomes, and
-              deliverables, then recommend the best engagement model.
-            </p>
-          </details>
-          <details className="white-card">
-            <summary>Can you integrate AI into existing systems?</summary>
-            <p>
-              We integrate NLP/LLM features (search, classification,
-              summarization) and design safe, measurable rollouts.
-            </p>
-          </details>
-        </div>
-      </section>
+  {/* FAQs */ }
+  <section className="faqs">
+    <h2>FAQs</h2>
+    <div className="faqs-grid">
+      <details className="white-card">
+        <summary>
+          Do you support product-based services and long-term maintenance?
+        </summary>
+        <p>
+          Yes. We partner as a product engineering team and provide
+          continuous support with SLAs.
+        </p>
+      </details>
+      <details className="white-card">
+        <summary>How do you start a new project?</summary>
+        <p>
+          We run a short discovery to align on scope, outcomes, and
+          deliverables, then recommend the best engagement model.
+        </p>
+      </details>
+      <details className="white-card">
+        <summary>Can you integrate AI into existing systems?</summary>
+        <p>
+          We integrate NLP/LLM features (search, classification,
+          summarization) and design safe, measurable rollouts.
+        </p>
+      </details>
+    </div>
+  </section>
 
-      {/* CTA */}
-      <section className="cta-section">
-        <div>
-          <h2>Let’s build your product or platform</h2>
-          <p>
-            We provide both services and product-based engagements to help
-            companies and clients ship faster.
-          </p>
-          <a href="/contact" className="primary-btn">
-            Get a quote
-          </a>
-        </div>
-      </section>
-    </main>
+  {/* CTA */ }
+  <section className="cta-section">
+    <div>
+      <h2>Let’s build your product or platform</h2>
+      <p>
+        We provide both services and product-based engagements to help
+        companies and clients ship faster.
+      </p>
+      <a href="/contact" className="primary-btn">
+        Get a quote
+      </a>
+    </div>
+  </section>
+    </main >
   );
 }
