@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../../public/css/styles.css'
 
+
+
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -25,14 +27,16 @@ export default function Header() {
         <div className="navbar-content">
           <div className="logo">
             <Link to="/" className="skip-link">
+              
+              <span className="logo-text">
+                
+              </span>
               <img
                 src="/Pictures/bluelogo.png"
                 alt="Raynx Systems Logo"
                 className="logo-image"
-              />
-              <span className="logo-text">
-                Raynx Systems
-              </span>
+              /> 
+              
             </Link>
           </div>
           <div
@@ -54,7 +58,7 @@ export default function Header() {
             { to: '/about', label: 'About' },
             { to: '/careers', label: 'Careers' },
             { to: '/contact', label: 'Contact' },
-            { to: '/blog', label: 'Blog' }
+           
           ].map(({ to, label }) => (
             <li key={to}>
               <Link

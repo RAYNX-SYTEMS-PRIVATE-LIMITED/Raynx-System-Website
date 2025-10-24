@@ -23,16 +23,15 @@ body {
 
 /* HEADER */
 
-
 /* --- CSS VARIABLES & BASIC SETUP --- */
 :root {
-  --bg-color: #FBF8EF;
+  --bg-color: #fbf8ef;
   /* Dark Teal from image */
   --primary-yellow: hsl(206, 70%, 49%);
   --primary-white: hsl(206, 70%, 49%);
   --text-light-gray: hsl(0, 2%, 58%);
-  --font-heading: 'Anton';
-  --font-body: 'Poppins';
+  --font-heading: "Anton";
+  --font-body: "Poppins";
 }
 
 * {
@@ -53,7 +52,7 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
   font-family: var(--font-body);
 }
 
@@ -73,12 +72,11 @@ h6 {
 
 /* --- Footer --- */
 
-
 .site-footer {
   background: #0f1720;
   color: #e6eef6;
   padding: 40px 20px 16px 20px;
-  border-top: 4px solid #0B95DD;
+  border-top: 4px solid #0b95dd;
 }
 
 .footer-inner {
@@ -104,7 +102,7 @@ h6 {
   display: inline-block;
   font-weight: 700;
   font-size: 20px;
-  color: #0B95DD;
+  color: #0b95dd;
   margin-left: 8px;
 }
 
@@ -145,7 +143,7 @@ h6 {
 }
 
 .footer-contact i {
-  color: #0B95DD;
+  color: #0b95dd;
   margin-right: 8px;
 }
 
@@ -177,6 +175,7 @@ h6 {
   display: flex;
   gap: 20px;
   transition: max-height 0.5s ease-in-out;
+  margin-left: -20px;
 }
 
 .nav-links li a {
@@ -188,7 +187,7 @@ h6 {
 
 /* --- Link Hover Animation --- */
 .nav-links li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -201,6 +200,10 @@ h6 {
 .nav-links li a:hover::after {
   width: 100%;
 }
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* --- MENU TOGGLE (Hamburger) --- */
 .menu-toggle {
@@ -208,7 +211,6 @@ h6 {
   font-size: 1.8rem;
   cursor: pointer;
 }
-
 
 .footer-links li a {
   text-decoration: none;
@@ -236,8 +238,7 @@ h6 {
   margin-top: 5px;
 }
 
-@media screen and (min-width:768px) {
-
+@media screen and (min-width: 768px) {
   .call_mobile {
     display: none;
   }
@@ -245,7 +246,6 @@ h6 {
   .quick-links {
     display: none;
   }
-
 
   /* --- HERO CONTAINER & HEADER --- */
   .hero-container {
@@ -257,8 +257,7 @@ h6 {
     width: 100%;
   }
 
-
-  .logo>a {
+  .logo > a {
     text-decoration: none;
   }
 
@@ -272,12 +271,11 @@ h6 {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 5px 20px;
+    padding: 13px 20px;
     animation: fadeInDown 1s ease-out;
   }
 
   .logo {
-
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -286,13 +284,13 @@ h6 {
 
   /* Style for your logo image */
   .logo-image {
-    height: 40px;
-    width: auto;
+    height: 50px;
+    width: 150px;
     letter-spacing: 1px;
-    color: #0B95DD;
-    font-family: 'Poppins', serif;
+    color: #0b95dd;
+    font-family: "Poppins", serif;
     position: absolute;
-    left: 140px;
+    left: 0px;
   }
 
   .logo-text {
@@ -319,16 +317,14 @@ h6 {
     transition: color 0.3s ease;
     color: #40a4ef;
     font-weight: 1000;
-
   }
-
 
   .main-nav ul li a:hover {
     color: black;
   }
 
   .main-nav a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -338,11 +334,9 @@ h6 {
     transition: width 0.3s ease-out;
   }
 
-
   .main-nav a:hover::after {
     width: 100%;
   }
-
 
   .icon {
     display: none;
@@ -362,7 +356,7 @@ h6 {
   .hero-background-graphic {
     position: absolute;
     z-index: 1;
-    opacity: 1.0;
+    opacity: 1;
     /* Opacity applied to the container */
   }
 
@@ -377,7 +371,7 @@ h6 {
     width: 100%;
     margin-bottom: 6em;
     height: auto;
-    filter: grayscale(1) brightness(1.0);
+    filter: grayscale(1) brightness(1);
   }
 
   .hero-text-content {
@@ -386,15 +380,12 @@ h6 {
     z-index: 2;
   }
 
-
-
   /* --- Main Slider & Slide Structure --- */
   .slider-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    
   }
 
   .slides-wrapper {
@@ -445,7 +436,7 @@ h6 {
 
   .business-header h1 {
     font-weight: 900;
-    font-family: 'Anton';
+    font-family: "Anton";
     font-size: 3.5em;
     line-height: 1;
     color: #ffc107;
@@ -494,7 +485,6 @@ h6 {
     font-weight: 520;
   }
 
-
   .business-image-wrapper {
     flex-basis: 45%;
     position: relative;
@@ -538,8 +528,6 @@ h6 {
 
   /* --- Header & Logo --- */
 
-
-
   /* 1. Lift the entire card up */
   .business-box:hover {
     transform: translateY(-12px);
@@ -566,8 +554,6 @@ h6 {
     bottom: -25px;
     right: -25px;
   }
-
-
 
   .logo {
     display: flex;
@@ -643,7 +629,6 @@ h6 {
     margin-left: 120px;
   }
 
-
   /* --- Slide 1: Products & Services Specifics --- */
   .image-content {
     position: relative;
@@ -654,11 +639,11 @@ h6 {
     position: relative;
     width: 80%;
     display: block;
- left: 50px;
-  height: 400px;
-  width: 600px;
-   bottom: -90px;
-   border-radius: 25px;
+    left: 50px;
+    height: 400px;
+    width: 600px;
+    bottom: -90px;
+    border-radius: 25px;
   }
 
   .main-image2 {
@@ -666,7 +651,6 @@ h6 {
     width: 50%;
     bottom: 160px;
     left: 246px;
-
   }
 
   .yellow-box {
@@ -710,14 +694,13 @@ h6 {
   } */
 
   /*market analysis page*/
-.text-content1 {
+  .text-content1 {
     flex-basis: 50%;
     /* margin-top: 140px; */
   }
 
   .text-content1 h1,
-  .text-content h3
-   {
+  .text-content h3 {
     font-size: 4rem;
     font-family: var(--font-heading);
     font-size: 3.5em;
@@ -730,15 +713,11 @@ h6 {
     text-align: left;
   }
 
-  
-
-  .chart-content{
+  .chart-content {
     width: 500px;
-    height:400px;
+    height: 400px;
     margin-top: 2px;
-
   }
-
 
   .text-content1 p {
     font-size: 16px;
@@ -747,7 +726,6 @@ h6 {
     max-width: 500px;
     color: hsl(40, 5%, 12%);
     margin-top: 30px;
-    
   }
 
   .text-content1 .highlight-title {
@@ -800,7 +778,6 @@ h6 {
     pointer-events: none;
   }
 
-
   .arr3 {
     background-color: rgba(212, 12, 12, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -834,7 +811,6 @@ h6 {
     pointer-events: none;
   }
 
-
   .arr1 {
     background-color: rgba(212, 12, 12, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -864,7 +840,6 @@ h6 {
     opacity: 0;
     pointer-events: none;
   }
-
 
   .nav-arrow-about {
     width: 50px;
@@ -922,7 +897,6 @@ h6 {
   .active .animate-on-load:nth-child(4) {
     transition-delay: 0.6s;
   }
-
 
   /* SVG Chart Drawing Animation */
   .chart-line {
@@ -986,7 +960,6 @@ h6 {
     animation: slideUpFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.6s backwards;
   }
 
-
   /* --- ANIMATIONS --- */
   @keyframes fadeInDown {
     from {
@@ -1022,7 +995,6 @@ h6 {
     }
   }
 
-
   /* --- BOTTOM ARROW --- */
   .scroll-down-arrow {
     position: absolute;
@@ -1049,11 +1021,9 @@ h6 {
     transform: scale(1.1);
   }
 
-
   .logo-brand {
     display: flex;
     align-items: center;
-
   }
 
   .brand-name {
@@ -1062,11 +1032,10 @@ h6 {
     letter-spacing: 1px;
     color: #e4dada;
     margin-left: 25px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
 
   .menu {
-
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -1083,16 +1052,12 @@ h6 {
     font-weight: 600;
     font-size: 19px;
     padding: 5px 0;
-    font-family: 'Poppins', Serif;
+    font-family: "Poppins", Serif;
   }
-
-
 
   .menu a:hover {
     color: hsl(200, 82%, 40%);
   }
-
-
 
   .one {
     width: 90px;
@@ -1100,7 +1065,6 @@ h6 {
     padding-right: 14px;
     border-radius: 50px;
   }
-
 
   .two {
     padding-right: 14px;
@@ -1111,7 +1075,6 @@ h6 {
     padding-right: 14px;
     border-radius: 90px;
   }
-
 
   .four {
     padding-right: 14px;
@@ -1127,13 +1090,9 @@ h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-
   }
 
-
-
   .bg-behind-text {
-
     position: relative;
     top: -60px;
     min-width: 180px;
@@ -1151,47 +1110,42 @@ h6 {
   }
 
   .hero h1 {
-    font-family: 'Arvo', serif;
+    font-family: "Arvo", serif;
     font-size: 74px;
     margin: 0;
   }
 
   .hero .highlight {
     color: hsl(210, 57%, 52%);
-    font-family: 'Anton', serif;
+    font-family: "Anton", serif;
   }
 
   .hero .highlight-yellow {
     color: #fdbd06;
     font-weight: 600;
-    font-family: 'Anton', serif;
+    font-family: "Anton", serif;
   }
 
   .hero .highlight-yellow2 {
     color: #fdbd06;
     font-weight: 600;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
 
   .tagline {
     color: hsl(209, 73%, 49%);
     font-size: 22px;
     font-weight: 400;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     margin-top: 80px;
     /* Creates gap between image and text */
   }
 
-
   body {
-
-
     height: 100vh;
     max-width: 100%;
     margin: 0;
     padding: 0;
-
-
   }
 
   .slider {
@@ -1199,8 +1153,6 @@ h6 {
     max-width: 100%;
     position: relative;
     overflow: hidden;
-
-
   }
 
   .slides {
@@ -1252,8 +1204,6 @@ h6 {
     right: 10px;
   }
 
-
-
   /* ABOUT US SECTION */
 
   .logo-brand1 {
@@ -1267,7 +1217,7 @@ h6 {
     font-weight: 600;
     letter-spacing: 1px;
     color: white;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
 
   .about-section {
@@ -1316,26 +1266,22 @@ h6 {
   }
 
   .about-text h2 {
-
     margin-top: 0px;
     text-align: left;
     font-weight: bold;
     color: hsl(208, 84%, 47%);
-    font-family: 'Anton';
+    font-family: "Anton";
     font-size: 4.5rem;
     line-height: 4;
     letter-spacing: 0.06em;
     /* optional: improves readability */
   }
 
-
   .about-text p {
-
     color: hsl(40, 5%, 12%);
     text-align: justify;
     font-family: var(--font-body);
   }
-
 
   .values-section {
     padding: 60px 80px;
@@ -1367,7 +1313,7 @@ h6 {
     line-height: 1.2;
     letter-spacing: 0.06em;
     color: hsl(209, 73%, 49%);
-    font-family: 'Anton';
+    font-family: "Anton";
     margin-top: -30px;
     text-align: justify;
     padding-left: 0.3em;
@@ -1384,9 +1330,6 @@ h6 {
     position: relative;
     top: -100px;
     margin-top: -66px;
-
-
-
   }
 
   .vision {
@@ -1394,33 +1337,26 @@ h6 {
 
     width: 280px;
     height: 210px;
-
   }
-
 
   .yellow {
     color: hsl(209, 73%, 49%);
     font-size: 35px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     text-align: left;
     margin-top: -7px;
-
   }
 
   .d1 {
-
     margin-top: 0px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     font-size: 15px;
     color: black;
     text-align: justify;
     margin-left: -54px;
-
   }
 
-
   .mission {
-
     margin-left: 20px;
     width: 433px;
     height: 210px;
@@ -1429,21 +1365,18 @@ h6 {
   .white {
     color: hsl(209, 73%, 49%);
     font-size: 35px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     text-align: left;
     margin-top: -7px;
-
-
   }
 
   .d2 {
     margin-top: 0px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     font-size: 15px;
     color: black;
     text-align: justify;
     margin-left: -54px;
-
   }
 
   .icon-box {
@@ -1476,8 +1409,6 @@ h6 {
     margin-top: 20px;
   }
 
-
-
   .company-values ul {
     list-style-type: none;
     padding-left: 0;
@@ -1490,14 +1421,13 @@ h6 {
   }
 
   .company-values li strong {
-    color: #FFA500;
+    color: #ffa500;
     /* Highlighted text */
   }
 
   .arrs {
     display: flex;
     margin-top: -150px;
-
   }
 
   .arr2 {
@@ -1560,9 +1490,7 @@ h6 {
     border-radius: 8px;
   }
 
-
   /*milestone section*/
-
 
   .milestones-section {
     scroll-snap-align: start;
@@ -1575,17 +1503,15 @@ h6 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
   }
 
   .milestones-header h1 {
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     color: #02457b;
     font-size: 3.2vw;
     font-weight: 502;
     line-height: 1.2;
     margin-left: 20px;
-
   }
 
   .milestone-img {
@@ -1607,11 +1533,10 @@ h6 {
     margin-top: 30px;
     margin-left: 55px;
     justify-content: space-between;
-
   }
 
   .box11 {
-    background-color: #ECE3CE;
+    background-color: #ece3ce;
     padding: 10px;
     border-radius: 18px;
     width: 400px;
@@ -1626,8 +1551,6 @@ h6 {
     font-weight: 600;
     transition-duration: 1.5s;
     transition-timing-function: ease-in-out;
-
-
   }
 
   .boxp {
@@ -1643,14 +1566,11 @@ h6 {
   }
 
   .box11:hover {
-    background-color: #ECE3CE;
+    background-color: #ece3ce;
     border: 4.5px solid rgb(16, 153, 212);
 
     transform: scale(1.1);
-
-
   }
-
 
   .milestone-points {
     display: flex;
@@ -1691,7 +1611,7 @@ h6 {
   .milestone-box {
     font-size: 16px;
     line-height: 1.4;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     flex: 1 1 30%;
     padding: 20px;
     border-radius: 6px;
@@ -1699,9 +1619,7 @@ h6 {
     color: rgb(0, 0, 0);
     text-align: justify;
     margin-left: -60px;
-
   }
-
 
   .milestones {
     margin-top: 40px;
@@ -1720,14 +1638,13 @@ h6 {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 12px;
-    border-left: 4px solid #FFD700;
+    border-left: 4px solid #ffd700;
     transition: transform 0.3s ease;
   }
 
   .milestone-item:hover {
     transform: translateY(-5px);
   }
-
 
   .arr4 {
     border: 1px solid whitesmoke;
@@ -1747,15 +1664,10 @@ h6 {
   }
 
   body {
-
-
     height: 100vh;
     max-width: 100%;
     margin: 0;
     padding: 0;
-
-
-
   }
 
   .sliderr {
@@ -1765,8 +1677,6 @@ h6 {
     padding: 0;
     position: relative;
     overflow: hidden;
-
-
   }
 
   .slidess {
@@ -1776,7 +1686,6 @@ h6 {
     padding: 0;
     display: flex;
     transition: transform 0.5s ease-in-out;
-
   }
 
   .slideactivee {
@@ -1785,12 +1694,9 @@ h6 {
     height: 100vh;
     min-width: 100%;
 
-
-
     box-sizing: border-box;
 
     text-align: center;
-
   }
 
   .slide3 {
@@ -1858,9 +1764,8 @@ h6 {
     letter-spacing: 1px;
     color: white;
     margin-left: 43px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
-
 
   .market {
     margin: 0;
@@ -1874,8 +1779,6 @@ h6 {
     max-width: 100%;
     min-width: 100%;
 
-
-
     color: rgb(212, 179, 15);
     display: flex;
     justify-content: space-between;
@@ -1883,11 +1786,10 @@ h6 {
 
     gap: 40px;
     flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   .marketrightt {
-
     display: flex;
     margin-left: 250px;
     margin-right: 200px;
@@ -1901,9 +1803,7 @@ h6 {
     max-width: 800px;
     padding-top: -55px;
     padding-left: -180px;
-
   }
-
 
   .market-left h1 {
     font-size: 35px;
@@ -1912,8 +1812,7 @@ h6 {
     text-align: left;
     padding-left: 70px;
     color: #febd02;
-    font-family: 'Poppins', serif;
-
+    font-family: "Poppins", serif;
   }
 
   .market-block {
@@ -1923,12 +1822,10 @@ h6 {
   .market-left pre {
     color: white;
     margin-left: 15px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     font-size: 16px;
     text-align: justify;
-
   }
-
 
   .market-block p {
     font-size: 15px;
@@ -1948,7 +1845,6 @@ h6 {
     max-width: 260%;
     height: auto;
     border-radius: 5px;
-
   }
 
   .arr6 {
@@ -1977,20 +1873,17 @@ h6 {
     right: -1420px;
     height: 35px;
     width: 75px;
-
   }
 
   .arr7:hover {
     background-color: #001ced;
   }
 
-
   #business-model {
     margin: 0;
     height: 0;
     height: 100vh;
     min-width: 100%;
-
   }
 
   .business-model-section {
@@ -1999,9 +1892,8 @@ h6 {
     height: 100vh;
     min-width: 100%;
 
-
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   .business-header {
@@ -2012,12 +1904,11 @@ h6 {
 
   .business-header h1 {
     font-size: 42px;
-    color: #B87C4C;
+    color: #b87c4c;
     font-weight: 800;
     margin-bottom: 10px;
     margin-top: 10px;
-    font-family: 'Poppins', serif;
-
+    font-family: "Poppins", serif;
   }
 
   .business-header p {
@@ -2028,7 +1919,6 @@ h6 {
   }
 
   .business-model-container {
-
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -2038,7 +1928,6 @@ h6 {
   }
 
   .business-box {
-
     border-radius: 8px;
     /* Added rounded corners */
     padding: 20px;
@@ -2051,9 +1940,7 @@ h6 {
     height: 350px;
     margin-top: 25px;
     background-color: #939292;
-
   }
-
 
   .model-image {
     width: 100%;
@@ -2061,7 +1948,6 @@ h6 {
     border-radius: 4px;
     /* Added slightly rounded corners */
     height: 240px;
-
   }
 
   .model-image1 {
@@ -2070,7 +1956,6 @@ h6 {
     /* Adjusted to full width of its container */
     border-radius: 4px;
     /* Added slightly rounded corners */
-
   }
 
   .arr8 {
@@ -2091,15 +1976,10 @@ h6 {
     background-color: #001ced;
   }
 
-
-
   /* Ourteam Section */
   #Ourteam {
-
     height: 100vh;
     width: 100%;
-
-
   }
 
   .logo-brand7 {
@@ -2114,16 +1994,14 @@ h6 {
     letter-spacing: 1px;
     color: lab(64.5% -6.08 -38.14);
     margin-left: 65px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
 
   #mid {
     padding-top: 50px;
-
   }
 
   .heading {
-
     color: hsla(207, 69%, 3%, 0.451);
     font-size: 40px;
     padding-left: 210px;
@@ -2141,7 +2019,6 @@ h6 {
     background: #ddeef7;
     margin-left: 140px;
     margin-top: 30px;
-
   }
 
   .cont p {
@@ -2163,8 +2040,6 @@ h6 {
     text-align: justify;
   }
 
-
-
   .memories {
     display: flex;
     align-items: center;
@@ -2177,14 +2052,16 @@ h6 {
     margin-top: 15px;
     border-radius: 30px;
     position: relative;
-    background: linear-gradient(120deg,
-        #000b21,
-        #003f82,
-        hsl(204, 68%, 53%),
-        hsl(216, 65%, 49%),
-        hsl(197, 83%, 43%),
-        #003f82,
-        #000b21);
+    background: linear-gradient(
+      120deg,
+      #000b21,
+      #003f82,
+      hsl(204, 68%, 53%),
+      hsl(216, 65%, 49%),
+      hsl(197, 83%, 43%),
+      #003f82,
+      #000b21
+    );
     background-size: 300% 300%;
     animation: shimmer 4s linear infinite;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -2247,18 +2124,13 @@ h6 {
     }
   }
 
-
   .cont a:hover {
-
     color: hsl(200, 71%, 54%);
   }
-
 
   /*Gallery Part*/
   #gallery {
     scroll-snap-align: start;
-
-
   }
 
   .imgslider {
@@ -2268,11 +2140,9 @@ h6 {
     height: 100vh;
     padding-left: 60px;
     background-color: #ddeef7;
-
   }
 
   .slideh {
-
     margin-top: 30px;
     width: 592px;
     height: 416px;
@@ -2289,9 +2159,8 @@ h6 {
     /* text-align: center; */
     font-size: 2vw;
     font-weight: 600;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
-
 
   .slider {
     position: relative;
@@ -2315,9 +2184,7 @@ h6 {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
   }
-
 
   .slideh img.activeh {
     display: block;
@@ -2350,21 +2217,17 @@ h6 {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-
   section {
     scroll-margin-top: 80px;
   }
-
 
   #gallery h2 {
     text-align: center;
     font-size: 2vw;
     font-weight: 700;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     color: hsla(0, 0%, 4%, 0.508);
   }
-
-
 
   .gallery {
     position: relative;
@@ -2397,7 +2260,7 @@ h6 {
     font-size: 2vw;
     font-weight: 700;
     margin-top: 30px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
     color: hsla(0, 0%, 4%, 0.508);
   }
 
@@ -2413,7 +2276,6 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     scroll-snap-align: start;
-
   }
 
   .inner-box img {
@@ -2431,10 +2293,6 @@ h6 {
     display: none;
   }
 
-
-
-
-
   /* connect usSection */
 
   .logo-brand8 {
@@ -2451,7 +2309,6 @@ h6 {
     color: white;
   }
 
-
   #part2 {
     display: flex;
     width: 100%;
@@ -2460,13 +2317,12 @@ h6 {
     margin-bottom: 60px;
   }
 
-
   .brand-name8 {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
     margin-left: 65px;
-    font-family: 'Poppins', serif;
+    font-family: "Poppins", serif;
   }
 
   #connect {
@@ -2475,16 +2331,13 @@ h6 {
   }
 
   .lt {
-
     margin-top: 23px;
   }
 
   /*contact us box styling*/
 
-
   /*contact styling*/
   .contact {
-
     list-style-type: none;
     border-radius: 30px;
     padding: 20px;
@@ -2494,7 +2347,6 @@ h6 {
     /* match your screenshot background */
     box-sizing: border-box;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
-
   }
 
   .contact h2 {
@@ -2531,8 +2383,6 @@ h6 {
     font-weight: 800;
   }
 
-
-
   .dotted-line {
     border-bottom: 2px dashed lab(2.8% 0.27 0.09);
   }
@@ -2548,11 +2398,9 @@ h6 {
     padding-left: 60px;
   }
 
-
   /*last section*/
 
   .end {
-
     margin-top: 35px;
   }
 
@@ -2563,15 +2411,13 @@ h6 {
     text-align: center;
   }
 
-  .third>p {
+  .third > p {
     display: inline;
-
   }
 
   .head3 {
     font-size: 75.4px;
     color: hsl(199, 100%, 26%);
-
   }
 
   .head4 {
@@ -2591,7 +2437,6 @@ h6 {
     font-size: 26.6px;
     font-style: normal;
     color: hsl(199, 100%, 26%);
-
   }
 
   .end {
@@ -2601,7 +2446,6 @@ h6 {
   .hidden {
     display: none !important;
   }
-
 }
 
 /* ==========================
@@ -2615,6 +2459,7 @@ h6 {
 
   .menu-toggle {
     display: block;
+    margin-left: 96px;
   }
 
   .nav-links {
@@ -2627,13 +2472,15 @@ h6 {
     gap: 12px;
     padding: 0 16px;
     max-height: 0;
+    margin-left: -20px;
     overflow: hidden;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .nav-links.show {
     padding: 12px 16px;
     max-height: 420px; /* enough to show all items */
+    margin-left: -20px;
   }
 
   .nav-links li a {
