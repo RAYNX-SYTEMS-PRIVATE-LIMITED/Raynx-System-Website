@@ -284,23 +284,23 @@ export default function Services() {
       <section className="delivery-process">
         <h2>Our Delivery Process</h2>
         <ol >
-          <li className="white-card" >
+          <li className="white-cardd" >
             <h4>1. Discover</h4>
             <p>Workshops, scope, success metrics, and milestones.</p>
           </li>
-          <li className="white-card">
+          <li className="white-cardd">
             <h4>2. Design</h4>
             <p>Information architecture, UI/UX prototypes, and technical design.</p>
           </li>
-          <li className="white-card">
+          <li className="white-cardd">
             <h4>3. Build</h4>
             <p>Sprints with demos; quality checks; performance & security gates.</p>
           </li>
-          <li className="white-card">
+          <li className="white-cardd">
             <h4>4. Testing</h4>
             <p>Sprints with demos; quality checks; performance & security gates.</p>
           </li>
-          <li className="white-card">
+          <li className="white-cardd">
             <h4>5 . Launch</h4>
             <p>Release, handover, training, and success monitoring.</p>
           </li>
@@ -446,7 +446,7 @@ export default function Services() {
   <section className="faqs">
     <h2>FAQs</h2>
     <div className="faqs-grid">
-      <details className="white-card">
+      <details className="white-cardf">
         <summary>
           Do you support product-based services and long-term maintenance?
         </summary>
@@ -455,14 +455,14 @@ export default function Services() {
           continuous support with SLAs.
         </p>
       </details>
-      <details className="white-card">
+      <details className="white-cardf">
         <summary>How do you start a new project?</summary>
         <p>
           We run a short discovery to align on scope, outcomes, and
           deliverables, then recommend the best engagement model.
         </p>
       </details>
-      <details className="white-card">
+      <details className="white-cardf">
         <summary>Can you integrate AI into existing systems?</summary>
         <p>
           We integrate NLP/LLM features (search, classification,

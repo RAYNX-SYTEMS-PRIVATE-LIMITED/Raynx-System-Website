@@ -259,7 +259,6 @@
     flex: 1 1 auto;
     max-width: 100%;
     width: 100%;
-    display: flex;
     flex-direction: row;
     gap: 12px;
     height: auto;
@@ -299,9 +298,7 @@
     position: relative;
     background-color: #ffffff;
     padding: 5px;
-
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .business-image {
@@ -1763,7 +1760,6 @@
     /* Makes the boxes flexible */
     max-width: 600px;
     /* Added max width for better layout */
-    display: flex;
     height: 350px;
     margin-top: 25px;
     margin-left: 45px;

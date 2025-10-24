@@ -374,7 +374,7 @@ html {
     .service-item:hover .service-icon {
       background: #5b21b6;
       color: #fff;
-      transform: rotate(10deg) scale(1.1);
+      /* transform: rotate(10deg) scale(1.1); */
     }
 
     /* Animations */
@@ -533,7 +533,6 @@ html {
 
 .white-card:hover{
   transform: scale(1.05);
-    /* background-color:#aabaad66; */
     background:#dce6f1;
 
 
@@ -616,6 +615,19 @@ box-shadow: 1px 2px 5px lightslategray;
 .delivery-process h4 {
   margin: 0 0 8px 0;
 } 
+
+
+.white-cardd{
+  border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 8px
+}
+
+.white-cardd:hover{
+   background:#dce6f1;
+   box-shadow: 1px 3px 1px 2px rgba(64, 63, 63, 0.577);
+}
+
 
 /*Tech stack*/
 .tech-stack {
@@ -701,24 +713,6 @@ box-shadow: 1px 2px 5px lightslategray;
 }
 
 
-/*Industries we serve*/
-.industries {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 16px;
-}
-
-.industries h2 {
-  font-family: 'Anton';
-  text-align: center;
-}
-
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 12px;
-  margin-top: 12px;
-}
 
 .faqs {
   max-width: 1000px;
@@ -736,6 +730,35 @@ box-shadow: 1px 2px 5px lightslategray;
   gap: 12px;
   margin-top: 12px;
 }
+
+.white-cardf{
+  border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 8px;
+    
+    border-image: initial;
+
+}
+
+.white-cardf p{
+   
+  margin-left: 22px;
+
+}
+
+
+.white-cardf summary{
+  font-weight: 550;
+  font-size: 18px;
+   margin: 5px;
+ 
+}
+
+.white-cardf:hover{
+   background:#dce6f1;
+   box-shadow: 1px 3px 1px 2px rgba(64, 63, 63, 0.577);
+}
+
 
 .cta-section {
   display: grid;

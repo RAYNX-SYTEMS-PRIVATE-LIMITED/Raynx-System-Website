@@ -2538,6 +2538,42 @@ h6 {
   .values-image {
     top: auto;
   }
+
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    
+  }
+
+  .slides-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    /* Smooth sliding effect */
+  }
+
+  .slide {
+    
+    /* Each slide takes up a third of the wrapper */
+    height: 100%;
+    display: flex;
+    align-items: center;
+   
+  }
+
+  .slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+  }
 }
 
 @media (max-width: 600px) {
