@@ -44,14 +44,13 @@
 }
 
 .main-header.scrolled .logo-image {
-<<<<<<< HEAD
-  height: 40px;
-      margin-left: -10px;
-=======
-  height: 50px;
-  width: 180px;
+
+
+  height: auto;
+  width: 150px;
       margin-left: -15px;
->>>>>>> 2b5483cad6abe5a6055fbf334d5610c4bae3970e
+
+
 }
 
 .logo-text {

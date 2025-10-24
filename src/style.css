@@ -1195,6 +1195,8 @@ p {
   .home-main .services-grid {
     grid-template-columns: 1fr;
   }
+ 
+
   .home-main .hero-title-raynx {
     font-size: 50px;
     color: var(--primary-blue);
@@ -1630,6 +1632,8 @@ p {
   display: block;
 }
 
+
+
 @media (max-width: 900px) {
   .values-content {
     grid-template-columns: 1fr;
@@ -1694,4 +1698,27 @@ p {
 .hero-text-content {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width:450px){
+   .home-main .hero-title-raynx {
+    font-size: 40px;
+    color: var(--primary-blue);
+    letter-spacing: 2px;
+  }
+  .home-main .hero-subtitle {
+        margin: 15px 0px 11px 113px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 14px;
+}
+  .home-main .hero-tagline {
+      
+    font-weight: 500;
+    font-size: 15px; 
+}
+.hero-container::before {
+  background-size: 60%;
+}
+
 }
