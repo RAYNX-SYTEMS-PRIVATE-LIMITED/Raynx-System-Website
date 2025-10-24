@@ -259,8 +259,92 @@ html {
   border-radius: 8px;
   padding: 8px;
 }
+/*what we offer*/
 
-.services-grid {
+
+    /* Grid layout */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Individual service item */
+    .service-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(16, 24, 40, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    /* Icon */
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #f1f5f9;
+      color: #5b21b6;
+      font-size: 28px;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Text */
+    .service-item h4 {
+      margin: 0 0 6px 0;
+      color: #0f3c4c;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .service-item p {
+      margin: 0;
+      color: #475569;
+    }
+
+    /* Hover effects */
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 22px rgba(10, 15, 23, 0.664);
+      border-color: #c7d2fe;
+    }
+
+    .service-item:hover .service-icon {
+      background: #5b21b6;
+      color: #fff;
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Staggered animation delays */
+    .service-item:nth-child(1) { animation-delay: 0.1s; }
+    .service-item:nth-child(2) { animation-delay: 0.2s; }
+    .service-item:nth-child(3) { animation-delay: 0.3s; }
+    .service-item:nth-child(4) { animation-delay: 0.4s; }
+/* .services-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 26px;
@@ -300,7 +384,7 @@ html {
 .service-item p {
   margin: 0;
   color: #475569;
-}
+} */
 
 .services-top {
   max-width: 1200px;
@@ -388,11 +472,7 @@ html {
  font-size: 23px;
 }
 
-.white-card p{
-  /* font-family: "PT Sans", sans-serif; */
-  /* font-size: 18px; */
 
-}
 
 .white-card img{
   height: 220px;
@@ -404,7 +484,8 @@ html {
 
 .white-card:hover{
   transform: scale(1.05);
-    background-color:#aabaad66;
+    /* background-color:#aabaad66; */
+    background:#dce6f1;
 
 
 }
@@ -499,13 +580,79 @@ box-shadow: 1px 2px 5px lightslategray;
   text-align: center;
 }
 
-.tech-stack-grid {
-  display: grid;
+.tech-stack-grid1 {
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 16px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.tech-stack-grid2 {
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 16px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.tech-stack-grid3 {
+  /* display: grid; */
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 12px;
   margin-top: 12px;
 }
 
+.white-card2{
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+    padding: 8px;
+    width: 50%;
+    margin-bottom: 10px;
+    height: 105px;
+    background-color:#fff;
+     transition: transform 1s ease-in-out;
+}
+
+
+.white-card2:hover{
+ transform: scale(1.05);
+   background:#dce6f1;
+}
+
+.white-card2 strong:hover{
+  color: white;
+}
+
+
+.white-card2 ol{
+  display: flex;
+  margin-top: 8px;
+}
+
+.white-card2 ol li{
+  list-style-type: none;
+  display: flex;
+  margin: 8px;
+}
+
+.white-card2 ol li p{
+  /* font-size:18px;
+  font-weight: 600;
+  margin-top: 15px; */
+  margin-left: 8px;
+}
+
+
+.white-card2 ol li img{
+  height: 30px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+
+/*Industries we serve*/
 .industries {
   max-width: 1100px;
   margin: 40px auto;
