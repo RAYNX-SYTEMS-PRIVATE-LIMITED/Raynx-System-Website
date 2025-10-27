@@ -37,7 +37,8 @@ export default function Careers() {
       details: {
         position: "Frontend Developer",
         experience: "1–3 years",
-        qualification: "B.E / B.Tech / MCA in Computer Science or related field",
+        qualification:
+          "B.E / B.Tech / MCA in Computer Science or related field",
         skills: ["React.js", "HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs"],
         profile:
           "Develop user-friendly web interfaces using React.js and Tailwind CSS. Work with design teams to ensure seamless UX/UI implementation and responsive design.",
@@ -77,7 +78,13 @@ export default function Careers() {
         position: "UI/UX Designer",
         experience: "1–4 years",
         qualification: "Any Graduate / Design Certification",
-        skills: ["Figma", "Adobe XD", "Photoshop", "Wireframing", "Prototyping"],
+        skills: [
+          "Figma",
+          "Adobe XD",
+          "Photoshop",
+          "Wireframing",
+          "Prototyping",
+        ],
         profile:
           "Design engaging user experiences with a focus on usability, accessibility, and modern aesthetics. Collaborate with developers to bring designs to life.",
       },
@@ -90,7 +97,13 @@ export default function Careers() {
         position: "Project Coordinator",
         experience: "2–4 years",
         qualification: "MBA / B.E / B.Tech",
-        skills: ["Agile Methodologies", "JIRA", "Scrum", "Documentation", "Team Coordination"],
+        skills: [
+          "Agile Methodologies",
+          "JIRA",
+          "Scrum",
+          "Documentation",
+          "Team Coordination",
+        ],
         profile:
           "Oversee project progress, coordinate deliverables, and maintain clear communication among stakeholders. Manage documentation and reporting under Agile frameworks.",
       },
@@ -222,21 +235,63 @@ export default function Careers() {
 
       <main style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Life at Raynx Systems Section */}
-        <section className="fade life-card" style={{ textAlign: "center", marginBottom: 50 }}>
-          <h1 style={{ fontFamily: "Anton, sans-serif", fontSize: "3rem", letterSpacing: 1, marginBottom: 10 }}>
+        <section
+          className="fade life-card"
+          style={{ textAlign: "center", marginBottom: 50 }}
+        >
+          <h1
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontSize: "3rem",
+              letterSpacing: 1,
+              marginBottom: 10,
+            }}
+          >
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}>
-            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, and fostering a culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects, we ensure that innovation and teamwork are at the heart of everything we do.
+          <p
+            style={{ 
+              color: "#475569",
+              fontSize: "1.1rem",
+              maxWidth: 850,
+              margin: "0 auto",
+              lineHeight: 1.8,
+            }}
+          >
+            At <strong>Raynx Systems</strong>, we believe in empowering talent,
+            nurturing creativity, and fostering a culture of learning. From
+            coding challenges to hackathons, mentorship programs, and
+            collaborative projects, we ensure that innovation and teamwork are
+            at the heart of everything we do.
           </p>
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}>
-            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>. Join us to build impactful digital solutions while shaping the next wave of technology excellence.
+          <p
+            style={{
+              color: "#475569",
+              fontSize: "1.1rem",
+              maxWidth: 850,
+              margin: "20px auto 0",
+              lineHeight: 1.8,
+            }}
+          >
+            We value <strong>work-life balance</strong>,{" "}
+            <strong>growth mindset</strong>, and{" "}
+            <strong>continuous upskilling</strong>. Join us to build impactful
+            digital solutions while shaping the next wave of technology
+            excellence.
           </p>
         </section>
 
         {/* Current Openings */}
         <section className="fade">
-          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2.2rem", textAlign: "center", color: "#1d4ed8", marginBottom: 30 }}>
+          <h2
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontSize: "2.2rem",
+              textAlign: "center",
+              color: "#1d4ed8",
+              marginBottom: 30,
+            }}
+          >
             Current Openings
           </h2>
 
@@ -249,7 +304,9 @@ export default function Careers() {
                   <span>📍 Location: {job.location}</span>
                   <span
                     className="show-details"
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    onClick={() =>
+                      setOpenIndex(openIndex === index ? null : index)
+                    }
                   >
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
@@ -264,11 +321,21 @@ export default function Careers() {
 
               {openIndex === index && (
                 <div className="details-box fade">
-                  <p><strong>Position:</strong> {job.details.position}</p>
-                  <p><strong>Experience:</strong> {job.details.experience}</p>
-                  <p><strong>Qualification:</strong> {job.details.qualification}</p>
-                  <p><strong>Skills:</strong> {job.details.skills.join(", ")}</p>
-                  <p><strong>Profile:</strong> {job.details.profile}</p>
+                  <p>
+                    <strong>Position:</strong> {job.details.position}
+                  </p>
+                  <p>
+                    <strong>Experience:</strong> {job.details.experience}
+                  </p>
+                  <p>
+                    <strong>Qualification:</strong> {job.details.qualification}
+                  </p>
+                  <p>
+                    <strong>Skills:</strong> {job.details.skills.join(", ")}
+                  </p>
+                  <p>
+                    <strong>Profile:</strong> {job.details.profile}
+                  </p>
                 </div>
               )}
 
@@ -311,13 +378,15 @@ export default function Careers() {
             How to Apply
           </h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
-            If you’re passionate about building the future with technology, send your resume to{" "}
+            If you’re passionate about building the future with technology, send
+            your resume to{" "}
             <a
               href="mailto:hr@raynxsystems.in"
               style={{ color: "#1d4ed8", textDecoration: "underline" }}
             >
               hr@raynxsystems.in
-            </a>.
+            </a>
+            .
           </p>
           <button
             className="apply-email-btn"
