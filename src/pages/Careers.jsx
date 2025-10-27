@@ -4,11 +4,16 @@ export default function Careers() {
   const [openIndex, setOpenIndex] = useState(null);
   const [showFormIndex, setShowFormIndex] = useState(null);
   const [selectedJob, setSelectedJob] = useState("");
-  const [resumeFile, setResumeFile] = useState(null);
   const [applyVisible, setApplyVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    driveUrl: "",
+  });
 
   useEffect(() => {
-    // Trigger animation for "How to Apply" after component mounts
     const timer = setTimeout(() => setApplyVisible(true), 600);
     return () => clearTimeout(timer);
   }, []);
@@ -16,17 +21,52 @@ export default function Careers() {
   const handleApplyClick = (index, jobTitle) => {
     setSelectedJob(jobTitle);
     setShowFormIndex(showFormIndex === index ? null : index);
-    setResumeFile(null);
+    setForm({ name: "", email: "", mobile: "", driveUrl: "" });
   };
 
-  const handleFileChange = (e) => {
-    setResumeFile(e.target.files[0]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Application submitted for ${selectedJob}`);
-    setShowFormIndex(null);
+
+    const { name, email, mobile, driveUrl } = form;
+    if (!driveUrl.startsWith("http")) {
+      alert("Please enter a valid Google Drive URL");
+      return;
+    }
+
+    setLoading(true);
+    const payload = {
+      name,
+      email,
+      mobile,
+      position: selectedJob,
+      driveUrl,
+    };
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxPOxTdbNt1-BQD_7KnsBDcQHryiRI8xdDaVHVvDpXK5FzL_gU0uo8MrOJZ4akEB212/exec",
+
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      alert(`Application submitted successfully for ${selectedJob}`);
+      setLoading(false);
+      setShowFormIndex(null);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again later.");
+      setLoading(false);
+    }
   };
 
   const jobs = [
@@ -110,11 +150,9 @@ export default function Careers() {
     >
       <style>
         {`
-          /* Fade-in animation */
           .fade { animation: fadeIn 0.6s ease-in-out; }
           @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-          /* Life section hover (light colors) */
           .life-card {
             background: white;
             border-radius: 16px;
@@ -129,7 +167,6 @@ export default function Careers() {
             box-shadow: 0 8px 18px rgba(147,197,253,0.4);
           }
 
-          /* Job container hover animation */
           .job-container {
             background: #fff;
             border: 1px solid #e2e8f0;
@@ -145,21 +182,10 @@ export default function Careers() {
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
           }
 
-          .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1d4ed8;
-            position: relative;
-            display: inline-block;
-          }
+          .job-title { font-size: 1.3rem; font-weight: 600; color: #1d4ed8; position: relative; display: inline-block; }
           .job-title::after {
-            content: "";
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: #1d4ed8;
+            content: ""; position: absolute; bottom: -4px; left: 0;
+            width: 0%; height: 2px; background-color: #1d4ed8;
             transition: width 0.3s ease;
           }
           .job-container:hover .job-title::after { width: 100%; }
@@ -178,21 +204,12 @@ export default function Careers() {
           .apply-btn { width: 100%; background: #1d4ed8; color: white; padding: 10px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; }
           .apply-btn:hover { background: #2563eb; }
 
-          /* How to Apply Section Animation */
           .apply-section {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            padding: 30px;
-            opacity: 0;
-            transform: translateY(40px) scale(0.98);
+            background: white; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px; opacity: 0; transform: translateY(40px) scale(0.98);
             transition: all 0.8s ease-in-out;
           }
-          .apply-section.visible {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            animation: bounceIn 1s ease;
-          }
+          .apply-section.visible { opacity: 1; transform: translateY(0) scale(1); animation: bounceIn 1s ease; }
           @keyframes bounceIn {
             0% { transform: translateY(40px); opacity: 0; }
             60% { transform: translateY(-10px); opacity: 1; }
@@ -200,21 +217,13 @@ export default function Careers() {
             100% { transform: translateY(0); }
           }
 
-          /* Apply button hover animation */
           .apply-email-btn {
-            background: #1d4ed8;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: all 0.4s ease;
+            background: #1d4ed8; color: white; border: none; padding: 10px 20px;
+            border-radius: 8px; font-weight: 600; cursor: pointer;
+            margin-top: 20px; transition: all 0.4s ease;
           }
           .apply-email-btn:hover {
-            background: #2563eb;
-            box-shadow: 0 0 12px rgba(37,99,235,0.5);
+            background: #2563eb; box-shadow: 0 0 12px rgba(37,99,235,0.5);
             transform: translateY(-3px);
           }
         `}
@@ -226,11 +235,14 @@ export default function Careers() {
           <h1 style={{ fontFamily: "Anton, sans-serif", fontSize: "3rem", letterSpacing: 1, marginBottom: 10 }}>
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}>
-            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, and fostering a culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects, we ensure that innovation and teamwork are at the heart of everything we do.
-          </p>
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}>
-            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>. Join us to build impactful digital solutions while shaping the next wave of technology excellence.
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}> 
+            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, 
+            and fostering a culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects, 
+            we ensure that innovation and teamwork are at the heart of everything we do.
+          </p> 
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}> 
+            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>. 
+            Join us to build impactful digital solutions while shaping the next wave of technology excellence. 
           </p>
         </section>
 
@@ -247,17 +259,11 @@ export default function Careers() {
                 <div className="meta-left">
                   <span>💼 Job Code: {job.code}</span>
                   <span>📍 Location: {job.location}</span>
-                  <span
-                    className="show-details"
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  >
+                  <span className="show-details" onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
                 </div>
-                <button
-                  className="apply-now"
-                  onClick={() => handleApplyClick(index, job.title)}
-                >
+                <button className="apply-now" onClick={() => handleApplyClick(index, job.title)}>
                   Apply Now
                 </button>
               </div>
@@ -276,18 +282,19 @@ export default function Careers() {
                 <div className="inline-form fade">
                   <h3>Apply for {selectedJob}</h3>
                   <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Full Name" required />
-                    <input type="email" placeholder="Email Address" required />
-                    <input type="tel" placeholder="Mobile Number" required />
-                    <label>Upload Resume (PDF/DOC)</label>
+                    <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
+                    <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} required />
+                    <input type="tel" name="mobile" placeholder="Mobile Number" value={form.mobile} onChange={handleChange} required />
                     <input
-                      type="file"
-                      accept=".pdf,.doc,.docx"
-                      onChange={handleFileChange}
+                      type="text"
+                      name="driveUrl"
+                      placeholder="Paste your Resume Drive URL"
+                      value={form.driveUrl}
+                      onChange={handleChange}
                       required
                     />
-                    <button type="submit" className="apply-btn">
-                      Submit Application
+                    <button type="submit" className="apply-btn" disabled={loading}>
+                      {loading ? "Submitting..." : "Submit Application"}
                     </button>
                   </form>
                 </div>
@@ -296,34 +303,19 @@ export default function Careers() {
           ))}
         </section>
 
-        {/* How to Apply Section with Animation */}
-        <section
-          className={`apply-section fade ${applyVisible ? "visible" : ""}`}
-          style={{ textAlign: "center", marginTop: 50 }}
-        >
-          <h2
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "2rem",
-              marginBottom: 12,
-            }}
-          >
-            How to Apply
-          </h2>
+        {/* How to Apply Section */}
+        <section className={`apply-section fade ${applyVisible ? "visible" : ""}`} style={{ textAlign: "center", marginTop: 50 }}>
+          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>How to Apply</h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
             If you’re passionate about building the future with technology, send your resume to{" "}
-            <a
-              href="mailto:hr@raynxsystems.in"
-              style={{ color: "#1d4ed8", textDecoration: "underline" }}
-            >
+            <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
               hr@raynxsystems.in
             </a>.
           </p>
           <button
             className="apply-email-btn"
             onClick={() =>
-              (window.location.href =
-                "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
+              (window.location.href = "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
             }
           >
             Apply via Email

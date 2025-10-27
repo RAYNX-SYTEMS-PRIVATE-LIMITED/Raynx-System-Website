@@ -1701,7 +1701,7 @@ p {
 }
 
 @media (max-width:450px){
-   .home-main .hero-title-raynx {
+   .home-main .hero-title-raynx { 
     font-size: 40px;
     color: var(--primary-blue);
     letter-spacing: 2px;
