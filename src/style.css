@@ -1652,16 +1652,34 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/Pictures/watermark.png');
+  background-image: url('/Pictures/bluelog.png');
   height: 100%;
   margin-bottom: 20px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 40%;
-  opacity: 0.15;
+  background-size: clamp(200px, 35%, 480px); /* responsive scaling */
+  opacity: 0.12;
   /* slightly stronger visibility */
-  animation: floatWatermark 12s ease-in-out infinite alternate;
+  animation: floatWatermark 10s ease-in-out infinite alternate;
   z-index: 0;
+}
+.hero-section,
+.hero-text-content,
+.hero-title,
+.hero-subtitle,
+.hero-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating watermark animation */
+@keyframes floatWatermark {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-12px) scale(1.03);
+  }
 }
 
 /*card size decrease*/
