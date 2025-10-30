@@ -54,7 +54,7 @@ export default function Footer() {
               src="/Pictures/bluelogo.png"
               alt="Raynx Systems Logo"
               className="footer-logo"
-              style={{ height: "70px", width: "auto", marginRight: "12px" }}
+              style={{ height: "70px", width: "auto", marginRight: "12px" ,border: "#0F435A"}}
             />
           </div>
 
