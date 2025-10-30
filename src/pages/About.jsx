@@ -408,8 +408,9 @@ export default function About() {
                 MR. PATHLAVATH CHENDER
               </h3>
               <p style={{ marginTop: 4, color: "#475569" }}>
-                CEO – Raynx Systems Pvt. Ltd.
-              </p>
+                 FOUNDER & CEO   </p>
+                {/* <p style={{ marginTop: 4, color: "#475569" }}>Raynx Systems Pvt. Ltd.
+              </p> */}
             </div>
           </div>
           <div className="profile-text">
@@ -424,12 +425,12 @@ export default function About() {
             >
               Building smart solutions that power tomorrow.
             </blockquote>
-            <p style={{ color: "#334155" }}>
+            <p style={{ color: "#334155", textAlign:"justify"}}>
              At the heart of Raynx Systems Pvt. Ltd. is Pathlavath Chender, a visionary leader driven by a passion for innovation and technology. As the Founder and CEO, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
              
-            <p style={{ color: "#334155" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+            <p style={{ color: "#334155", textAlign:"justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
 
-            <p style={{ color: "#334155" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
+            <p style={{ color: "#334155", textAlign:"justify" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
             </p>
             <p style={{ marginTop: 12 }}>
               <a
@@ -444,78 +445,7 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Profile: Finance Director */}
-        <motion.div
-          className="profile-row"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: 24,
-            alignItems: "start",
-            maxWidth: 1100,
-            margin: "40px auto",
-            padding: "0 16px",
-          }}
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="profile-photo" style={{ textAlign: "center" }}>
-            <img
-              src="/gallery/venkanna_director.jpg"
-              alt="Director – Finance"
-              style={{
-                width: "100%",
-                maxWidth: 320,
-                height: "auto",
-                objectFit: "cover",
-                borderRadius: 6,
-              }}
-            />
-            <div style={{ marginTop: 12 }}>
-              <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
-                MR. BODA VENKANNA NAYAK
-              </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Finance</p>
-            </div>
-          </div>
-          <div className="profile-text">
-            <blockquote
-              style={{
-                color: "#0f3c4c",
-                fontSize: "1.4rem",
-                lineHeight: 1.4,
-                fontWeight: 600,
-                margin: "0 0 16px 0",
-              }}
-            >
-              Any solution should not only bring a change, it should
-              revolutionize lives dynamically.
-            </blockquote>
-            <p style={{ color: "#334155" }}>
-              With a deep understanding of IT infrastructure and services, Mr.
-              Venkanna has played a key role in driving growth and shaping
-              business strategy. He focuses on financial leadership, operational
-              efficiency, and building sustainable, long-term value.
-            </p>
-            <p style={{ color: "#334155" }}>
-              Beyond the boardroom, he’s passionate about fitness and continuous
-              learning—bringing balance and discipline to his leadership
-              approach.
-            </p>
-            <p style={{ marginTop: 12 }}>
-              <a
-                href="https://www.linkedin.com/in/venkanna-boda-38081037a/"
-                className="primary-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Connect on LinkedIn
-              </a>
-            </p>
-          </div>
-        </motion.div>
+       
 
         {/* Profile: Administration Director */}
         <motion.div
@@ -550,7 +480,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. AMBATI THIRUPATHI GOUD
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Administrator</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>CO-FOUNDER & DIRECTOR OF ADMINISTRATION</p>
             </div>
           </div>
           <div className="profile-text">
@@ -565,7 +495,7 @@ export default function About() {
             >
               We’re not just a team — we’re a force for progress.
             </blockquote>
-            <p style={{ color: "#334155" }}>
+            <p style={{ color: "#334155", textAlign:"justify" }}>
               Oversees operations, policy development, and coordination to
               ensure organizational efficiency and operational excellence. He
               enables teams with clear processes and a culture of
@@ -583,7 +513,82 @@ export default function About() {
             </p>
           </div>
         </motion.div>
+
+         {/* Profile: Finance Director */}
+        <motion.div
+          className="profile-row"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 2fr",
+            gap: 24,
+            alignItems: "start",
+            maxWidth: 1100,
+            margin: "40px auto",
+            padding: "0 16px",
+          }}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="profile-photo" style={{ textAlign: "center" }}>
+            <img
+              src="/gallery/venkanna_director.jpg"
+              alt="Director – Finance"
+              style={{
+                width: "100%",
+                maxWidth: 320,
+                height: "auto",
+                objectFit: "cover",
+                borderRadius: 6,
+              }}
+            />
+            <div style={{ marginTop: 12 }}>
+              <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
+                MR. BODA VENKANNA NAYAK
+              </h3>
+              <p style={{ marginTop: 4, color: "#475569" }}>CO-FOUNDER & DIRECTOR OF FINANCE</p>
+            </div>
+          </div>
+          <div className="profile-text">
+            <blockquote
+              style={{
+                color: "#0f3c4c",
+                fontSize: "1.4rem",
+                lineHeight: 1.4,
+                fontWeight: 600,
+                margin: "0 0 16px 0",
+                textAlign:"justify",
+              }}
+            >
+              Any solution should not only bring a change, it should
+              revolutionize lives dynamically.
+            </blockquote>
+            <p style={{ color: "#334155",textAlign:"justify" }}>
+              With a deep understanding of IT infrastructure and services, Mr.
+              Venkanna has played a key role in driving growth and shaping
+              business strategy. He focuses on financial leadership, operational
+              efficiency, and building sustainable, long-term value.
+            </p>
+            <p style={{ color: "#334155" ,textAlign:"justify"}}>
+              Beyond the boardroom, he’s passionate about fitness and continuous
+              learning—bringing balance and discipline to his leadership
+              approach.
+            </p>
+            <p style={{ marginTop: 12 }}>
+              <a
+                href="https://www.linkedin.com/in/venkanna-boda-38081037a/"
+                className="primary-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Connect on LinkedIn
+              </a>
+            </p>
+          </div>
+        </motion.div>
       </section>
+      
 
       {/* Life at Raynx Systems (Gallery) */}
       <section id="company-gallery" style={{ padding: "40px 20px",}}>
