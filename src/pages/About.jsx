@@ -480,7 +480,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. AMBATI THIRUPATHI GOUD
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>CO-FOUNDER & DIRECTOR OF ADMINISTRATION</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
             </div>
           </div>
           <div className="profile-text">
@@ -547,7 +547,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. BODA VENKANNA NAYAK
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>CO-FOUNDER & DIRECTOR OF FINANCE</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
             </div>
           </div>
           <div className="profile-text">
