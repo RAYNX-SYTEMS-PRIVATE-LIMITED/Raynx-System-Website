@@ -426,7 +426,7 @@ export default function About() {
               Building smart solutions that power tomorrow.
             </blockquote>
             <p style={{ color: "#334155", textAlign:"justify"}}>
-             At the heart of Raynx Systems Pvt. Ltd. is Pathlavath Chender, a visionary leader driven by a passion for innovation and technology. As the Founder and CEO, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
+             At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>Founder and CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
              
             <p style={{ color: "#334155", textAlign:"justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
 
@@ -571,8 +571,8 @@ export default function About() {
               revolutionize lives dynamically.
             </blockquote>
             <p style={{ color: "#334155",textAlign:"justify" }}>
-              With a deep understanding of IT infrastructure and services, Mr.
-              Venkanna has played a key role in driving growth and shaping
+              With a deep understanding of IT infrastructure and services, <b>Mr.
+              Venkanna</b> has played a key role in driving growth and shaping
               business strategy. He focuses on financial leadership, operational
               efficiency, and building sustainable, long-term value.
             </p>
