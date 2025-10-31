@@ -500,7 +500,7 @@ export default function About() {
             </p>
 
             <p style={{ color: "#334155", textAlign: "justify" }}>
-              Under his guidance, Raynx Systems has embraced a results-driven approach that harmonizes disciplined process management with forward-thinking innovation. Mr. Goud’s focus on transparency, accountability, and performance has fostered a culture of trust, efficiency, and continuous improvement—empowering teams to take ownership and deliver with excellence.
+              Under his guidance, Raynx Systems has embraced a results-driven approach that harmonizes disciplined process management with forward-thinking innovation. His emphasis on transparency, accountability, and performance has fostered a culture of trust, efficiency, and continuous improvement—empowering teams to take ownership and deliver with excellence.
             </p>
 
             <p style={{ color: "#334155", textAlign: "justify" }}>
