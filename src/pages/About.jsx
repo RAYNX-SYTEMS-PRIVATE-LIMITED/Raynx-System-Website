@@ -77,7 +77,7 @@ export default function About() {
               position: "relative",
               display: "inline-block",
               animation: "bounceIn 0.9s ease",
-              paddingTop:"30px",
+              paddingTop: "30px",
             }}
           >
             ABOUT US
@@ -90,7 +90,7 @@ export default function About() {
               backgroundColor: "#10659E",
               borderRadius: "2px",
               marginBottom: "25px",
-              marginLeft:'0px',
+              marginLeft: '0px',
               animation: "underlineGrow 0.6s ease forwards",
             }}
           ></div>
@@ -408,8 +408,8 @@ export default function About() {
                 MR. PATHLAVATH CHENDER
               </h3>
               <p style={{ marginTop: 4, color: "#475569" }}>
-                 FOUNDER & CEO   </p>
-                {/* <p style={{ marginTop: 4, color: "#475569" }}>Raynx Systems Pvt. Ltd.
+                FOUNDER & CEO   </p>
+              {/* <p style={{ marginTop: 4, color: "#475569" }}>Raynx Systems Pvt. Ltd.
               </p> */}
             </div>
           </div>
@@ -425,12 +425,12 @@ export default function About() {
             >
               Building smart solutions that power tomorrow.
             </blockquote>
-            <p style={{ color: "#334155", textAlign:"justify"}}>
-             At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>Founder and CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
-             
-            <p style={{ color: "#334155", textAlign:"justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>Founder and CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
 
-            <p style={{ color: "#334155", textAlign:"justify" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
+            <p style={{ color: "#334155", textAlign: "justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+
+            <p style={{ color: "#334155", textAlign: "justify" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
             </p>
             <p style={{ marginTop: 12 }}>
               <a
@@ -445,7 +445,7 @@ export default function About() {
           </div>
         </motion.div>
 
-       
+
 
         {/* Profile: Administration Director */}
         <motion.div
@@ -466,7 +466,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/director2.jpg"
+              src="/gallery/tirupathi goud.jpg"
               alt="Director – Administration"
               style={{
                 width: "100%",
@@ -495,17 +495,17 @@ export default function About() {
             >
               We’re not just a team — we’re a force for progress.
             </blockquote>
-           <p style={{ color: "#334155", textAlign: "justify" }}>
-  At the core of Raynx Systems Pvt. Ltd. stands <b>Mr. Ambati Thirupathi Goud</b>, a dynamic leader whose strategic vision and commitment to excellence continue to shape the company’s growth and innovation. As the <b>Director</b>, he provides decisive leadership, ensuring seamless operational governance, effective policy formulation, and cohesive inter-departmental collaboration across the organization.
-</p>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              At the core of Raynx Systems Pvt. Ltd. stands <b>Mr. Ambati Thirupathi Goud</b>, a dynamic leader whose strategic vision and commitment to excellence continue to shape the company’s growth and innovation. As the <b>Director</b>, he provides decisive leadership, ensuring seamless operational governance, effective policy formulation, and cohesive inter-departmental collaboration across the organization.
+            </p>
 
-<p style={{ color: "#334155", textAlign: "justify" }}>
-  Under his guidance, Raynx Systems has embraced a results-driven approach that harmonizes disciplined process management with forward-thinking innovation. Mr. Goud’s focus on transparency, accountability, and performance has fostered a culture of trust, efficiency, and continuous improvement—empowering teams to take ownership and deliver with excellence.
-</p>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              Under his guidance, Raynx Systems has embraced a results-driven approach that harmonizes disciplined process management with forward-thinking innovation. Mr. Goud’s focus on transparency, accountability, and performance has fostered a culture of trust, efficiency, and continuous improvement—empowering teams to take ownership and deliver with excellence.
+            </p>
 
-<p style={{ color: "#334155", textAlign: "justify" }}>
-  With a leadership philosophy rooted in empowerment and sustainability, Mr. Goud ensures that every initiative at Raynx Systems aligns with its mission to engineer and deliver market-leading technological solutions. His strategic foresight continues to position the company as a benchmark for innovation, operational excellence, and long-term industry leadership.
-</p>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              With a leadership philosophy rooted in empowerment and sustainability, Mr. Goud ensures that every initiative at Raynx Systems aligns with its mission to engineer and deliver market-leading technological solutions. His strategic foresight continues to position the company as a benchmark for innovation, operational excellence, and long-term industry leadership.
+            </p>
 
             <p style={{ marginTop: 12 }}>
               <a
@@ -520,7 +520,7 @@ export default function About() {
           </div>
         </motion.div>
 
-         {/* Profile: Finance Director */}
+        {/* Profile: Finance Director */}
         <motion.div
           className="profile-row"
           style={{
@@ -564,19 +564,19 @@ export default function About() {
                 lineHeight: 1.4,
                 fontWeight: 600,
                 margin: "0 0 16px 0",
-                textAlign:"justify",
+                textAlign: "justify",
               }}
             >
               Any solution should not only bring a change, it should
               revolutionize lives dynamically.
             </blockquote>
-            <p style={{ color: "#334155",textAlign:"justify" }}>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
               With a deep understanding of IT infrastructure and services, <b>Mr.
-              Venkanna</b> has played a key role in driving growth and shaping
+                Venkanna</b> has played a key role in driving growth and shaping
               business strategy. He focuses on financial leadership, operational
               efficiency, and building sustainable, long-term value.
             </p>
-            <p style={{ color: "#334155" ,textAlign:"justify"}}>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
               Beyond the boardroom, he’s passionate about fitness and continuous
               learning—bringing balance and discipline to his leadership
               approach.
@@ -594,10 +594,10 @@ export default function About() {
           </div>
         </motion.div>
       </section>
-      
+
 
       {/* Life at Raynx Systems (Gallery) */}
-      <section id="company-gallery" style={{ padding: "40px 20px",}}>
+      <section id="company-gallery" style={{ padding: "40px 20px", }}>
         <h2 className="sec">Life at Raynx Systems</h2>
         <div className="scroll-gallery">
           <div className="scroll-track">
