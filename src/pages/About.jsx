@@ -496,10 +496,9 @@ export default function About() {
               We’re not just a team — we’re a force for progress.
             </blockquote>
             <p style={{ color: "#334155", textAlign:"justify" }}>
-              Oversees operations, policy development, and coordination to
-              ensure organizational efficiency and operational excellence. He
-              enables teams with clear processes and a culture of
-              accountability.
+            As the Director of Raynx Systems Pvt. Ltd., Mr. Ambati Thirupathi Goud plays a pivotal role in defining the company’s strategic direction and ensuring the highest standards of operational excellence. With a strong commitment to innovation, governance, and performance, he provides comprehensive executive oversight across all business functions—ranging from strategic planning and policy formulation to cross-functional coordination and organizational development.
+            Under Mr. Goud’s visionary leadership, Raynx Systems has adopted a results-oriented management framework that integrates disciplined execution with creative problem-solving. His focus on fostering transparency, accountability, and collaborative efficiency has been instrumental in establishing a culture rooted in trust, innovation, and continuous improvement.
+        Mr. Goud’s leadership philosophy is grounded in empowerment and clarity—encouraging teams to take ownership, drive excellence, and align their efforts with the company’s broader mission of delivering cutting-edge technological solutions. His strategic foresight and unwavering dedication to sustainable growth continue to position Raynx Systems Pvt. Ltd. as a forward-thinking leader in its domain, poised for long-term success and industry influence.
             </p>
             <p style={{ marginTop: 12 }}>
               <a
