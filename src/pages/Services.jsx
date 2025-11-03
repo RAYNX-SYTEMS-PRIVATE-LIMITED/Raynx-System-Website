@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../../public/css/styles.css";
+import "../assets/css/styles.css";
 
 export default function Services() {
   const rootRef = useRef(null);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import '../../public/css/styles.css'
+import '../assets/css/styles.css';
 
 
 
