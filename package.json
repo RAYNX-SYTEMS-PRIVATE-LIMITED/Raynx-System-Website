@@ -18,6 +18,6 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.5"
-  },
-  "homepage": "https://raynx-sytems-private-limited.github.io/Raynx-System-Website"
+  }
+ 
 }
