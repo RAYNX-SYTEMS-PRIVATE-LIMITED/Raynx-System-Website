@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://raynx-sytems-private-limited.github.io/Raynx-System-Website",
+  "homepage": "https://raynx-sytems-private-limited.github.io/",
 
   "scripts": {
     "dev": "vite",
