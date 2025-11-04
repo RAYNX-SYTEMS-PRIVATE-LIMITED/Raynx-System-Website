@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import '../../public/css/styles.css'
+import '../assets/css/styles.css';
+import { imageUrl } from '../utils/imageUrl'
 
 
 
@@ -26,13 +27,13 @@ export default function Header() {
       <nav className="navbar">
         <div className="navbar-content">
           <div className="logo">
-            <Link to="/" className="skip-link">
+            <Link to="" className="skip-link">
               
               <span className="logo-text">
                 
               </span>
               <img
-                src="/Pictures/bluelogo.png"
+                src={imageUrl('Pictures/bluelogo.jpg')}
                 alt="Raynx Systems Logo"
                 className="logo-image"
               /> 
@@ -52,18 +53,19 @@ export default function Header() {
         </div>
         <ul className={`nav-links ${open ? 'show' : ''}`} id="nav-links">
           {[
-            { to: '/', label: 'Home' },
-            { to: '/services', label: 'Services' },
-            { to: '/products', label: 'Products' },
-            { to: '/about', label: 'About' },
-            { to: '/careers', label: 'Careers' },
-            { to: '/contact', label: 'Contact' },
+            { to: '', label: 'Home' },
+            { to: 'services', label: 'Services' },
+            { to: 'products', label: 'Products' },
+            { to: 'about', label: 'About' },
+            { to: 'careers', label: 'Careers' },
+            { to: 'contact', label: 'Contact' },
            
           ].map(({ to, label }) => (
             <li key={to}>
               <Link
                 to={to}
-                className={location.pathname === to ? 'active' : ''}
+                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className={location.pathname === `/${to}` ? 'active' : ''}
                 onMouseEnter={(e) => {
                   e.target.style.color = 'var(--primary-blue)'
                   e.target.style.transform = 'translateY(-2px)'

@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-blue);
+  color: var(--bg-white);
 }
 
 body {
@@ -247,7 +247,7 @@ p {
 }
 
 .primary-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-medium);
 }
 
@@ -771,6 +771,7 @@ p {
 /* Header Z-index and Padding Fix */
 .main-header {
   z-index: 1000;
+  padding-bottom: 8px !important;
 }
 
 .main-content {
@@ -960,6 +961,8 @@ p {
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, rgba(18, 115, 182, 0.06), rgba(12, 74, 110, 0.06));
+  margin-top: -50px;
+  padding-bottom: 40px !important;
   /* background-color: #f0eded; */
 
 }
@@ -1652,7 +1655,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/Pictures/bluelog.png');
+  background-image: url('./assets/Pictures/bluelog.png');
   height: 100%;
   margin-bottom: 20px;
   background-repeat: no-repeat;
@@ -1689,7 +1692,7 @@ p {
   border-radius: 12px;
   padding: 16px;
   padding-left: 40px;
-  height: auto;
+  height: auto !important;
   min-height: fit-content;
   display: flex;
   flex-direction: column;

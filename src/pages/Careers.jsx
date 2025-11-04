@@ -49,7 +49,7 @@ export default function Careers() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxPOxTdbNt1-BQD_7KnsBDcQHryiRI8xdDaVHVvDpXK5FzL_gU0uo8MrOJZ4akEB212/exec",
+        "https://script.google.com/macros/s/AKfycbyHJSnlx6mhXMGaV_pEg4UXMMLeOvy96B8lSPZYEtwVs5QpevZC5SzWPR8alWdq_E0x0A/exec",
 
         {
           method: "POST",
@@ -70,85 +70,176 @@ export default function Careers() {
   };
 
   const jobs = [
-    {
-      title: "Frontend Developer",
-      code: "RXS-001",
-      location: "Hyderabad",
-      details: {
-        position: "Frontend Developer",
-        experience: "1–3 years",
-        qualification:
-          "B.E / B.Tech / MCA in Computer Science or related field",
-        skills: ["React.js", "HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs"],
-        profile:
-          "Develop user-friendly web interfaces using React.js and Tailwind CSS. Work with design teams to ensure seamless UX/UI implementation and responsive design.",
-      },
+    // {
+    //   title: "Frontend Developer",
+    //   code: "RXS-001",
+    //   location: "Hyderabad",
+    //   details: {
+    //     position: "Frontend Developer",
+    //     experience: "1–3 years",
+    //     qualification: "B.E / B.Tech / MCA in Computer Science or related field",
+    //     skills: ["React.js", "HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs"],
+    //     profile:
+    //       "Develop user-friendly web interfaces using React.js and Tailwind CSS. Work with design teams to ensure seamless UX/UI implementation and responsive design.",
+    //   },
+    // },
+  {
+    title: "Python Developer",
+    code: "RXS-001",
+    location: "Hyderabad",
+    details: {
+      position: "Python Developer",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / MCA / ",
+      skills: ["Python", "Flask/Django", "REST APIs", "SQL", "ORM (SQLAlchemy/Django ORM)"],
+      profile:
+        "Design, develop, and maintain RESTful APIs using Python (Flask/Django) and relational databases. Ensure scalability, performance, and security of backend applications.",
     },
-    {
-      title: "Backend Developer",
-      code: "RXS-002",
-      location: "Hyderabad",
-      details: {
-        position: "Backend Developer",
-        experience: "2–5 years",
-        qualification: "B.E / B.Tech / MCA",
-        skills: ["Node.js", "Express.js", "MongoDB", "Postman", "JWT"],
-        profile:
-          "Design and maintain REST APIs using Node.js and MongoDB. Ensure scalability, performance, and secure backend infrastructure for production-grade applications.",
-      },
+  },
+  {
+    title: "Java Developer",
+    code: "RXS-002",
+    location: "Hyderabad",
+    details: {
+      position: "Java Developer",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / MCA",
+      skills: ["Core Java", "Spring Boot", "Hibernate", "RESTful APIs", "SQL"],
+      profile:
+        "Develop and maintain Java-based web applications and backend services using Spring Boot. Ensure high performance, security, and scalability of applications.",
     },
-    {
-      title: "Full Stack Developer",
-      code: "RXS-003",
-      location: "Hyderabad",
-      details: {
-        position: "Full Stack Developer",
-        experience: "3–6 years",
-        qualification: "B.E / B.Tech / MCA",
-        skills: ["React.js", "Node.js", "MongoDB", "Git", "AWS / Azure"],
-        profile:
-          "Build and manage both frontend and backend components using the MERN stack. Collaborate across teams, implement version control, and deploy scalable apps.",
-      },
+  },
+  {
+    title: "MERN Stack Developer",
+    code: "RXS-003",
+    location: "Hyderabad",
+    details: {
+      position: "MERN Stack Developer",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / MCA",
+      skills: ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs"],
+      profile:
+        "Build full-stack web applications using the MERN stack. Design scalable REST APIs, develop responsive UIs, and ensure smooth data flow between frontend and backend.",
     },
-    {
-      title: "UI/UX Designer",
-      code: "RXS-004",
-      location: "Hyderabad",
-      details: {
-        position: "UI/UX Designer",
-        experience: "1–4 years",
-        qualification: "Any Graduate / Design Certification",
-        skills: [
-          "Figma",
-          "Adobe XD",
-          "Photoshop",
-          "Wireframing",
-          "Prototyping",
-        ],
-        profile:
-          "Design engaging user experiences with a focus on usability, accessibility, and modern aesthetics. Collaborate with developers to bring designs to life.",
-      },
+  },
+  {
+    title: "UI/UX Designer",
+    code: "RXS-004",
+    location: "Hyderabad",
+    details: {
+      position: "UI/UX Designer",
+      experience: "0-3 years",
+      qualification: "Any Graduate / Design Certification",
+      skills: ["Figma", "Adobe XD", "Photoshop", "Wireframing", "Prototyping"],
+      profile:
+        "Design engaging user experiences focusing on usability and modern aesthetics. Collaborate with developers to create visually appealing, user-friendly interfaces.",
     },
-    {
-      title: "Project Coordinator",
-      code: "RXS-005",
-      location: "Hyderabad",
-      details: {
-        position: "Project Coordinator",
-        experience: "2–4 years",
-        qualification: "MBA / B.E / B.Tech",
-        skills: [
-          "Agile Methodologies",
-          "JIRA",
-          "Scrum",
-          "Documentation",
-          "Team Coordination",
-        ],
-        profile:
-          "Oversee project progress, coordinate deliverables, and maintain clear communication among stakeholders. Manage documentation and reporting under Agile frameworks.",
-      },
+  },
+  {
+    title: "Digital Marketing Executive",
+    code: "RXS-005",
+    location: "Hyderabad",
+    details: {
+      position: "Digital Marketing Executive",
+      experience: "0-3 years",
+      qualification: "Any Graduate / MBA in Marketing preferred",
+      skills: ["SEO", "Google Ads", "Social Media Marketing", "Content Strategy", "Analytics"],
+      profile:
+        "Plan and execute digital marketing campaigns across multiple platforms. Optimize website traffic, manage social media presence, and analyze performance metrics.",
     },
-  ];
+  },
+  {
+    title: "Business Development Manager (BDM)",
+    code: "RXS-006",
+    location: "Hyderabad",
+    details: {
+      position: "Business Development Manager",
+      experience: "0-3 years",
+      qualification: "Any Graduate / MBA preferred",
+      skills: ["Lead Generation", "Client Communication", "Negotiation", "CRM Tools", "Market Research"],
+      profile:
+        "Identify new business opportunities, build client relationships, and drive company growth through strategic sales initiatives and partnerships.",
+    },
+  },
+  {
+    title: "Cyber Security Analyst",
+    code: "RXS-007",
+    location: "Hyderabad",
+    details: {
+      position: "Cyber Security Analyst",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / B.Sc in Computer Science / Cyber Security",
+      skills: ["Network Security", "Vulnerability Assessment", "Firewalls", "Ethical Hacking", "Incident Response"],
+      profile:
+        "Monitor systems for security threats, conduct vulnerability assessments, and implement protective measures to safeguard company data and infrastructure.",
+    },
+  },
+  {
+    title: "AWS Cloud Engineer",
+    code: "RXS-008",
+    location: "Hyderabad",
+    details: {
+      position: "AWS Cloud Engineer",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / MCA / Cloud Certification preferred",
+      skills: ["AWS Services", "EC2", "S3", "Lambda", "DevOps", "CI/CD"],
+      profile:
+        "Deploy, manage, and monitor cloud-based applications on AWS. Ensure scalability, security, and high availability of infrastructure using DevOps practices.",
+    },
+  },
+  {
+    title: "Data Analyst",
+    code: "RXS-009",
+    location: "Hyderabad",
+    details: {
+      position: "Data Analyst",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / B.Sc / M.Sc in Statistics, CS, or related field",
+      skills: ["Python", "SQL", "Excel", "Power BI / Tableau", "Pandas"],
+      profile:
+        "Collect, clean, and analyze datasets to derive actionable insights. Create reports and dashboards to support business decisions and improve efficiency.",
+    },
+  },
+  {
+    title: "Data Scientist",
+    code: "RXS-010",
+    location: "Hyderabad",
+    details: {
+      position: "Data Scientist",
+      experience: "0-3 years",
+      qualification: "B.E / B.Tech / M.Tech / M.Sc in Data Science, AI, or related field",
+      skills: ["Python", "Machine Learning", "Pandas", "NumPy", "Scikit-learn", "TensorFlow"],
+      profile:
+        "Build and deploy machine learning models to solve business challenges. Analyze complex data, develop predictive algorithms, and optimize data-driven decisions.",
+    },
+  },
+  {
+  title: "AI & ML Developer",
+  code: "RXS-011",
+  location: "Hyderabad",
+  details: {
+    position: "AI & ML Developer",
+    experience: "0-3 years",
+    qualification: "B.E / B.Tech / M.Tech / M.Sc in AI, Data Science, or Computer Science",
+    skills: [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow / PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Data Preprocessing",
+      "Model Deployment"
+    ],
+    profile:
+      "Design, develop, and deploy AI and machine learning models for real-world applications. Work on data preprocessing, model training, evaluation, and optimization. Collaborate with data engineers and software developers to integrate intelligent features into production systems.",
+  },
+},
+
+];
+
+  
 
   return (
     <div
@@ -244,93 +335,24 @@ export default function Careers() {
 
       <main style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Life at Raynx Systems Section */}
-        <section
-          className="fade life-card"
-          style={{ textAlign: "center", marginBottom: 50 }}
-        >
-          <h1
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "3rem",
-              letterSpacing: 1,
-              marginBottom: 10,
-            }}
-          >
+        <section className="fade life-card" style={{ textAlign: "center", marginBottom: 50 }}>
+          <h1 style={{ fontFamily: "Anton, sans-serif", fontSize: "3rem", letterSpacing: 1, marginBottom: 10 }}>
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
-          <p
-            style={{
-              color: "#475569",
-              fontSize: "1.1rem",
-              maxWidth: 850,
-              margin: "0 auto",
-              lineHeight: 1.8,
-            }}
-          >
-            At <strong>Raynx Systems</strong>, we believe in empowering talent,
-            nurturing creativity, and fostering a culture of learning. From
-            coding challenges to hackathons, mentorship programs, and
-            collaborative projects, we ensure that innovation and teamwork are
-            at the heart of everything we do.
-          </p>
-          <p
-            style={{
-              color: "#475569",
-              fontSize: "1.1rem",
-              maxWidth: 850,
-              margin: "20px auto 0",
-              lineHeight: 1.8,
-            }}
-          >
-            We value <strong>work-life balance</strong>,{" "}
-            <strong>growth mindset</strong>, and{" "}
-            <strong>continuous upskilling</strong>. Join us to build impactful
-            digital solutions while shaping the next wave of technology
-            excellence.
-          </p>
-          <p
-            style={{
-              color: "#475569",
-              fontSize: "1.1rem",
-              maxWidth: 850,
-              margin: "0 auto",
-              lineHeight: 1.8,
-            }}
-          >
-            At <strong>Raynx Systems</strong>, we believe in empowering talent,
-            nurturing creativity, and fostering a culture of learning. From
-            coding challenges to hackathons, mentorship programs, and
-            collaborative projects, we ensure that innovation and teamwork are
-            at the heart of everything we do.
-          </p>
-          <p
-            style={{
-              color: "#475569",
-              fontSize: "1.1rem",
-              maxWidth: 850,
-              margin: "20px auto 0",
-              lineHeight: 1.8,
-            }}
-          >
-            We value <strong>work-life balance</strong>,{" "}
-            <strong>growth mindset</strong>, and{" "}
-            <strong>continuous upskilling</strong>. Join us to build impactful
-            digital solutions while shaping the next wave of technology
-            excellence.
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}> 
+            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, 
+            and fostering a culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects, 
+            we ensure that innovation and teamwork are at the heart of everything we do.
+          </p> 
+          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}> 
+            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>. 
+            Join us to build impactful digital solutions while shaping the next wave of technology excellence. 
           </p>
         </section>
 
         {/* Current Openings */}
         <section className="fade">
-          <h2
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "2.2rem",
-              textAlign: "center",
-              color: "#1d4ed8",
-              marginBottom: 30,
-            }}
-          >
+          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2.2rem", textAlign: "center", color: "#1d4ed8", marginBottom: 30 }}>
             Current Openings
           </h2>
 
@@ -341,18 +363,7 @@ export default function Careers() {
                 <div className="meta-left">
                   <span>💼 Job Code: {job.code}</span>
                   <span>📍 Location: {job.location}</span>
-                  <span
-                    className="show-details"
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                  ></span>
-                  <span
-                    className="show-details"
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                  >
+                  <span className="show-details" onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
                 </div>
@@ -366,21 +377,11 @@ export default function Careers() {
 
               {openIndex === index && (
                 <div className="details-box fade">
-                  <p>
-                    <strong>Position:</strong> {job.details.position}
-                  </p>
-                  <p>
-                    <strong>Experience:</strong> {job.details.experience}
-                  </p>
-                  <p>
-                    <strong>Qualification:</strong> {job.details.qualification}
-                  </p>
-                  <p>
-                    <strong>Skills:</strong> {job.details.skills.join(", ")}
-                  </p>
-                  <p>
-                    <strong>Profile:</strong> {job.details.profile}
-                  </p>
+                  <p><strong>Position:</strong> {job.details.position}</p>
+                  <p><strong>Experience:</strong> {job.details.experience}</p>
+                  <p><strong>Qualification:</strong> {job.details.qualification}</p>
+                  <p><strong>Skills:</strong> {job.details.skills.join(", ")}</p>
+                  <p><strong>Profile:</strong> {job.details.profile}</p>
                 </div>
               )}
 
@@ -449,22 +450,10 @@ export default function Careers() {
             How to Apply
           </h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
-            If you’re passionate about building the future with technology, send
-            your resume to{" "}
-            <a
-              href="mailto:hr@raynxsystems.in"
-              style={{ color: "#1d4ed8", textDecoration: "underline" }}
-            >
-              If you’re passionate about building the future with technology,
-              send your resume to{" "}
-            </a>
-            <a
-              href="mailto:hr@raynxsystems.in"
-              style={{ color: "#1d4ed8", textDecoration: "underline" }}
-            >
+            If you’re passionate about building the future with technology, send your resume to{" "}
+            <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
               hr@raynxsystems.in
-            </a>
-            .
+            </a>.
           </p>
           <button
             className="apply-email-btn"

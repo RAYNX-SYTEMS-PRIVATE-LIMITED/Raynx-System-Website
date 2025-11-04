@@ -1,4 +1,5 @@
 import React from "react";
+import { imageUrl } from '../utils/imageUrl'
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -38,7 +39,7 @@ export default function About() {
           }}
         >
           <img
-            src="/Pictures/newimage1.jpg"
+            src={imageUrl('Pictures/newimage1.jpg')}
             alt="Team working"
             style={{
               width: "100%",
@@ -77,7 +78,7 @@ export default function About() {
               position: "relative",
               display: "inline-block",
               animation: "bounceIn 0.9s ease",
-              paddingTop:"30px",
+              paddingTop: "30px",
             }}
           >
             ABOUT US
@@ -90,7 +91,7 @@ export default function About() {
               backgroundColor: "#10659E",
               borderRadius: "2px",
               marginBottom: "25px",
-              marginLeft:'0px',
+              marginLeft: '0px',
               animation: "underlineGrow 0.6s ease forwards",
             }}
           ></div>
@@ -317,7 +318,7 @@ export default function About() {
           }}
         >
           <img
-            src="/Pictures/valueimg.jpg"
+            src={imageUrl('Pictures/valueimg.jpg')}
             alt="Company Meeting"
             style={{
               width: "100%",
@@ -393,7 +394,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/chander_ceo.jpg"
+              src={imageUrl('gallery/chander_ceo.jpg')}
               alt="CEO and Founder"
               style={{
                 width: "100%",
@@ -408,8 +409,9 @@ export default function About() {
                 MR. PATHLAVATH CHENDER
               </h3>
               <p style={{ marginTop: 4, color: "#475569" }}>
-                CEO – Raynx Systems Pvt. Ltd.
-              </p>
+                FOUNDER & CEO   </p>
+              {/* <p style={{ marginTop: 4, color: "#475569" }}>Raynx Systems Pvt. Ltd.
+              </p> */}
             </div>
           </div>
           <div className="profile-text">
@@ -424,16 +426,91 @@ export default function About() {
             >
               Building smart solutions that power tomorrow.
             </blockquote>
-            <p style={{ color: "#334155" }}>
-             At the heart of Raynx Systems Pvt. Ltd. is Pathlavath Chender, a visionary leader driven by a passion for innovation and technology. As the Founder and CEO, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
-             
-            <p style={{ color: "#334155" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>Founder and CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
 
-            <p style={{ color: "#334155" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
+            <p style={{ color: "#334155", textAlign: "justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
+
+            <p style={{ color: "#334155", textAlign: "justify" }}> At Raynx Systems, we believe in turning ideas into intelligent solutions that drive growth, efficiency, and success for our clients across industries.
             </p>
             <p style={{ marginTop: 12 }}>
               <a
                 href="https://www.linkedin.com/in/chender-pathlavath-b7883025b/"
+                className="primary-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Connect on LinkedIn
+              </a>
+            </p>
+          </div>
+        </motion.div>
+
+
+
+        {/* Profile: Administration Director */}
+        <motion.div
+          className="profile-row"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 2fr",
+            gap: 24,
+            alignItems: "start",
+            maxWidth: 1100,
+            margin: "40px auto",
+            padding: "0 16px",
+          }}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="profile-photo" style={{ textAlign: "center" }}>
+            <img
+              src={imageUrl('gallery/tirupathi goud.jpg')}
+              alt="Director – Administration"
+              style={{
+                width: "100%",
+                maxWidth: 320,
+                height: "auto",
+                objectFit: "cover",
+                borderRadius: 6,
+              }}
+            />
+            <div style={{ marginTop: 12 }}>
+              <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
+                MR. AMBATI THIRUPATHI GOUD
+              </h3>
+              <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
+            </div>
+          </div>
+          <div className="profile-text">
+            <blockquote
+              style={{
+                color: "#0f3c4c",
+                fontSize: "1.4rem",
+                lineHeight: 1.4,
+                fontWeight: 600,
+                margin: "0 0 16px 0",
+              }}
+            >
+              We’re not just a team — we’re a force for progress.
+            </blockquote>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              At the core of Raynx Systems Pvt. Ltd. stands <b>Mr. Ambati Thirupathi Goud</b>, a dynamic leader whose strategic vision and commitment to excellence continue to shape the company’s growth and innovation. As the <b>Director</b>, he provides decisive leadership, ensuring seamless operational governance, effective policy formulation, and cohesive inter-departmental collaboration across the organization.
+            </p>
+
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              Under his guidance, Raynx Systems has embraced a results-driven approach that harmonizes disciplined process management with forward-thinking innovation. His emphasis on transparency, accountability, and performance has fostered a culture of trust, efficiency, and continuous improvement—empowering teams to take ownership and deliver with excellence.
+            </p>
+
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              With a leadership philosophy rooted in empowerment and sustainability, Mr. Goud ensures that every initiative at Raynx Systems aligns with its mission to engineer and deliver market-leading technological solutions. His strategic foresight continues to position the company as a benchmark for innovation, operational excellence, and long-term industry leadership.
+            </p>
+
+            <p style={{ marginTop: 12 }}>
+              <a
+                href="https://www.linkedin.com/in/ambati-thirupathi-goud-0b7a7b1b3/"
                 className="primary-btn"
                 target="_blank"
                 rel="noreferrer"
@@ -463,7 +540,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/venkanna_director.jpg"
+              src={imageUrl('gallery/venkanna_director.jpg')}
               alt="Director – Finance"
               style={{
                 width: "100%",
@@ -477,7 +554,7 @@ export default function About() {
               <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
                 MR. BODA VENKANNA NAYAK
               </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Finance</p>
+              <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
             </div>
           </div>
           <div className="profile-text">
@@ -488,18 +565,19 @@ export default function About() {
                 lineHeight: 1.4,
                 fontWeight: 600,
                 margin: "0 0 16px 0",
+                textAlign: "justify",
               }}
             >
               Any solution should not only bring a change, it should
               revolutionize lives dynamically.
             </blockquote>
-            <p style={{ color: "#334155" }}>
-              With a deep understanding of IT infrastructure and services, Mr.
-              Venkanna has played a key role in driving growth and shaping
+            <p style={{ color: "#334155", textAlign: "justify" }}>
+              With a deep understanding of IT infrastructure and services, <b>Mr.
+                Venkanna</b> has played a key role in driving growth and shaping
               business strategy. He focuses on financial leadership, operational
               efficiency, and building sustainable, long-term value.
             </p>
-            <p style={{ color: "#334155" }}>
+            <p style={{ color: "#334155", textAlign: "justify" }}>
               Beyond the boardroom, he’s passionate about fitness and continuous
               learning—bringing balance and discipline to his leadership
               approach.
@@ -516,109 +594,43 @@ export default function About() {
             </p>
           </div>
         </motion.div>
-
-        {/* Profile: Administration Director */}
-        <motion.div
-          className="profile-row"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: 24,
-            alignItems: "start",
-            maxWidth: 1100,
-            margin: "40px auto",
-            padding: "0 16px",
-          }}
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="profile-photo" style={{ textAlign: "center" }}>
-            <img
-              src="/gallery/director2.jpg"
-              alt="Director – Administration"
-              style={{
-                width: "100%",
-                maxWidth: 320,
-                height: "auto",
-                objectFit: "cover",
-                borderRadius: 6,
-              }}
-            />
-            <div style={{ marginTop: 12 }}>
-              <h3 style={{ margin: 0, color: "#0f3c4c", fontWeight: 700 }}>
-                MR. AMBATI THIRUPATHI GOUD
-              </h3>
-              <p style={{ marginTop: 4, color: "#475569" }}>Co-Founder Administrator</p>
-            </div>
-          </div>
-          <div className="profile-text">
-            <blockquote
-              style={{
-                color: "#0f3c4c",
-                fontSize: "1.4rem",
-                lineHeight: 1.4,
-                fontWeight: 600,
-                margin: "0 0 16px 0",
-              }}
-            >
-              We’re not just a team — we’re a force for progress.
-            </blockquote>
-            <p style={{ color: "#334155" }}>
-              Oversees operations, policy development, and coordination to
-              ensure organizational efficiency and operational excellence. He
-              enables teams with clear processes and a culture of
-              accountability.
-            </p>
-            <p style={{ marginTop: 12 }}>
-              <a
-                href="https://www.linkedin.com/in/ambati-thirupathi-goud-0b7a7b1b3/"
-                className="primary-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Connect on LinkedIn
-              </a>
-            </p>
-          </div>
-        </motion.div>
       </section>
 
+
       {/* Life at Raynx Systems (Gallery) */}
-      <section id="company-gallery" style={{ padding: "40px 20px",}}>
+      <section id="company-gallery" style={{ padding: "40px 20px", }}>
         <h2 className="sec">Life at Raynx Systems</h2>
         <div className="scroll-gallery">
           <div className="scroll-track">
             <img
-              src="/gallery/image1.jpg"
+              src={imageUrl('gallery/image1.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image1.jpg"
+              data-src={imageUrl('gallery/image1.jpg')}
             />
             <img
-              src="/gallery/image10.jpeg"
+              src={imageUrl('gallery/image10.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image10.jpeg"
+              data-src={imageUrl('gallery/image10.jpeg')}
             />
             <img
-              src="/gallery/image11.jpeg"
+              src={imageUrl('gallery/image11.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image11.jpeg"
+              data-src={imageUrl('gallery/image11.jpeg')}
             />
             <img
-              src="/gallery/image4.jpg"
+              src={imageUrl('gallery/image4.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image4.jpg"
+              data-src={imageUrl('gallery/image4.jpg')}
             />
             <img
-              src="/gallery/image7.jpg"
+              src={imageUrl('gallery/image7.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image7.jpg"
+              data-src={imageUrl('gallery/image7.jpg')}
             />
             <img
-              src="/gallery/image10.jpeg"
+              src={imageUrl('gallery/image10.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image10.jpeg"
+              data-src={imageUrl('gallery/image10.jpeg')}
             />
           </div>
         </div>

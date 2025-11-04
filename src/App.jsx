@@ -19,8 +19,8 @@ function PageWrap({ children }) {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     const el = ref.current
     if (!el) return
-    el.classList.remove('page-enter')
-    const id = requestAnimationFrame(() => el.classList.add('page-enter'))
+    // Add page-enter class immediately for visibility
+    el.classList.add('page-enter')
     // Lazy-load images within the current page content on each route change
     const images = el.querySelectorAll('img[data-src]')
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -39,12 +39,11 @@ function PageWrap({ children }) {
       imageObserver.observe(img)
     })
     return () => {
-      cancelAnimationFrame(id)
       imageObserver.disconnect()
     }
   }, [location.pathname])
   return (
-    <div key={location.pathname} ref={ref} className="page">
+    <div key={location.pathname} ref={ref} className="page page-enter">
       {children}
     </div>
   )
