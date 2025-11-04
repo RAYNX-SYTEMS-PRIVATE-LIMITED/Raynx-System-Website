@@ -64,7 +64,8 @@ export default function Header() {
             <li key={to}>
               <Link
                 to={to}
-                className={location.pathname === to ? 'active' : ''}
+                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className={location.pathname === `/${to}` ? 'active' : ''}
                 onMouseEnter={(e) => {
                   e.target.style.color = 'var(--primary-blue)'
                   e.target.style.transform = 'translateY(-2px)'
