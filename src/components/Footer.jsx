@@ -52,7 +52,7 @@ export default function Footer() {
               }}
             ></span>
             <img
-              src={imageUrl('Pictures/bluelogo.png')}
+              src={imageUrl('Pictures/bluelogo.jpg')}
               alt="Raynx Systems Logo"
               className="footer-logo"
               style={{ height: "70px", width: "auto", marginRight: "12px" ,border: "#0F435A"}}

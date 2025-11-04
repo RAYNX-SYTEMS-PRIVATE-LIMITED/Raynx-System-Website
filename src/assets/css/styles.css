@@ -271,8 +271,9 @@ h6 {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 13px 20px;
+    
     animation: fadeInDown 1s ease-out;
+    padding-bottom: 8px;
   }
 
   .logo {
