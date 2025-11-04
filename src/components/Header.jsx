@@ -27,7 +27,7 @@ export default function Header() {
       <nav className="navbar">
         <div className="navbar-content">
           <div className="logo">
-            <Link to="/" className="skip-link">
+            <Link to="" className="skip-link">
               
               <span className="logo-text">
                 
@@ -53,12 +53,12 @@ export default function Header() {
         </div>
         <ul className={`nav-links ${open ? 'show' : ''}`} id="nav-links">
           {[
-            { to: '/', label: 'Home' },
-            { to: '/services', label: 'Services' },
-            { to: '/products', label: 'Products' },
-            { to: '/about', label: 'About' },
-            { to: '/careers', label: 'Careers' },
-            { to: '/contact', label: 'Contact' },
+            { to: '', label: 'Home' },
+            { to: 'services', label: 'Services' },
+            { to: 'products', label: 'Products' },
+            { to: 'about', label: 'About' },
+            { to: 'careers', label: 'Careers' },
+            { to: 'contact', label: 'Contact' },
            
           ].map(({ to, label }) => (
             <li key={to}>

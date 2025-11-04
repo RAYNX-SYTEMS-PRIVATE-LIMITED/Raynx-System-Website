@@ -402,7 +402,7 @@ h6 {
     width: 33.333%;
     /* Each slide takes up a third of the wrapper */
     height: 100%;
-    padding: 60px 80px;
+    padding: 40px 80px;
     display: flex;
     align-items: center;
     justify-content: center;

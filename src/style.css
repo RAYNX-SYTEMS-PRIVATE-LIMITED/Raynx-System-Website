@@ -1692,7 +1692,7 @@ p {
   border-radius: 12px;
   padding: 16px;
   padding-left: 40px;
-  height: auto;
+  height: auto !important;
   min-height: fit-content;
   display: flex;
   flex-direction: column;
