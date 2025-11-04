@@ -428,11 +428,11 @@ export default function Services() {
             </ol>
 
           </div>
-      </div>
+        </div>
       </section >
 
-    {/* Industries */ }
-  {/* <section className="industries">
+      {/* Industries */}
+      {/* <section className="industries">
         <h2>Industries We Serve</h2>
         <div className="industries-grid">
           <div className="white-card">SaaS & B2B</div>
@@ -443,49 +443,49 @@ export default function Services() {
         </div>
       </section> */}
 
-  {/* FAQs */ }
-  <section className="faqs">
-    <h2>FAQs</h2>
-    <div className="faqs-grid">
-      <details className="white-cardf">
-        <summary>
-          Do you support product-based services and long-term maintenance?
-        </summary>
-        <p>
-          Yes. We partner as a product engineering team and provide
-          continuous support with SLAs.
-        </p>
-      </details>
-      <details className="white-cardf">
-        <summary>How do you start a new project?</summary>
-        <p>
-          We run a short discovery to align on scope, outcomes, and
-          deliverables, then recommend the best engagement model.
-        </p>
-      </details>
-      <details className="white-cardf">
-        <summary>Can you integrate AI into existing systems?</summary>
-        <p>
-          We integrate NLP/LLM features (search, classification,
-          summarization) and design safe, measurable rollouts.
-        </p>
-      </details>
-    </div>
-  </section>
+      {/* FAQs */}
+      <section className="faqs">
+        <h2>FAQs</h2>
+        <div className="faqs-grid">
+          <details className="white-cardf">
+            <summary>
+              Do you support product-based services and long-term maintenance?
+            </summary>
+            <p>
+              Yes. We partner as a product engineering team and provide
+              continuous support with SLAs.
+            </p>
+          </details>
+          <details className="white-cardf">
+            <summary>How do you start a new project?</summary>
+            <p>
+              We run a short discovery to align on scope, outcomes, and
+              deliverables, then recommend the best engagement model.
+            </p>
+          </details>
+          <details className="white-cardf">
+            <summary>Can you integrate AI into existing systems?</summary>
+            <p>
+              We integrate NLP/LLM features (search, classification,
+              summarization) and design safe, measurable rollouts.
+            </p>
+          </details>
+        </div>
+      </section>
 
-  {/* CTA */ }
-  <section className="cta-section">
-    <div>
-      <h2>Let’s build your product or platform</h2>
-      <p>
-        We provide both services and product-based engagements to help
-        companies and clients ship faster.
-      </p>
-      <Link to="/contact" className="primary-btn">
+      {/* CTA */}
+      <section className="cta-section">
+        <div>
+          <h2>Let’s build your product or platform</h2>
+          <p>
+            We provide both services and product-based engagements to help
+            companies and clients ship faster.
+          </p>
+          <Link to="/contact" className="primary-btn">
             Get a quote
           </Link>
-    </div>
-  </section>
+        </div>
+      </section>
     </main >
   );
 }

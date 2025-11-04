@@ -49,7 +49,7 @@ export default function Careers() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxPOxTdbNt1-BQD_7KnsBDcQHryiRI8xdDaVHVvDpXK5FzL_gU0uo8MrOJZ4akEB212/exec",
+        "https://script.google.com/macros/s/AKfycbyHJSnlx6mhXMGaV_pEg4UXMMLeOvy96B8lSPZYEtwVs5QpevZC5SzWPR8alWdq_E0x0A/exec",
 
         {
           method: "POST",
