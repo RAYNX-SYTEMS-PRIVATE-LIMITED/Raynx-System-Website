@@ -481,10 +481,9 @@ export default function Services() {
         We provide both services and product-based engagements to help
         companies and clients ship faster.
       </p>
-     
-<a href="/contact" className="primary-btn">
-        Get a quote
-      </a>
+      <Link to="/contact" className="primary-btn">
+            Get a quote
+          </Link>
     </div>
   </section>
     </main >
