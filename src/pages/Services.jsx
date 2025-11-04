@@ -482,9 +482,9 @@ export default function Services() {
         companies and clients ship faster.
       </p>
      
-<Link to="contact" className="primary-btn">
-  Get a quote
-</Link>
+<a href="/contact" className="primary-btn">
+        Get a quote
+      </a>
     </div>
   </section>
     </main >
