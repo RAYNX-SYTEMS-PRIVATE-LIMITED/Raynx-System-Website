@@ -367,7 +367,10 @@ export default function Careers() {
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
                 </div>
-                <button className="apply-now" onClick={() => handleApplyClick(index, job.title)}>
+                <button
+                  className="apply-now"
+                  onClick={() => handleApplyClick(index, job.title)}
+                >
                   Apply Now
                 </button>
               </div>
@@ -386,9 +389,30 @@ export default function Careers() {
                 <div className="inline-form fade">
                   <h3>Apply for {selectedJob}</h3>
                   <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
-                    <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} required />
-                    <input type="tel" name="mobile" placeholder="Mobile Number" value={form.mobile} onChange={handleChange} required />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Full Name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
+                    />
+                    <input
+                      type="tel"
+                      name="mobile"
+                      placeholder="Mobile Number"
+                      value={form.mobile}
+                      onChange={handleChange}
+                      required
+                    />
                     <input
                       type="text"
                       name="driveUrl"
@@ -397,7 +421,11 @@ export default function Careers() {
                       onChange={handleChange}
                       required
                     />
-                    <button type="submit" className="apply-btn" disabled={loading}>
+                    <button
+                      type="submit"
+                      className="apply-btn"
+                      disabled={loading}
+                    >
                       {loading ? "Submitting..." : "Submit Application"}
                     </button>
                   </form>
@@ -408,8 +436,19 @@ export default function Careers() {
         </section>
 
         {/* How to Apply Section */}
-        <section className={`apply-section fade ${applyVisible ? "visible" : ""}`} style={{ textAlign: "center", marginTop: 50 }}>
-          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>How to Apply</h2>
+        <section
+          className={`apply-section fade ${applyVisible ? "visible" : ""}`}
+          style={{ textAlign: "center", marginTop: 50 }}
+        >
+          <h2
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontSize: "2rem",
+              marginBottom: 12,
+            }}
+          >
+            How to Apply
+          </h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
             If you’re passionate about building the future with technology, send your resume to{" "}
             <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
@@ -419,7 +458,8 @@ export default function Careers() {
           <button
             className="apply-email-btn"
             onClick={() =>
-              (window.location.href = "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
+              (window.location.href =
+                "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
             }
           >
             Apply via Email
