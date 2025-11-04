@@ -14,7 +14,7 @@ import './assets/css/components.css'
 const container = document.getElementById('app')
 createRoot(container).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Raynx-System-Website">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
