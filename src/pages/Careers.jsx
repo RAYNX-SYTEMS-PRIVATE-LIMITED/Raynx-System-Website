@@ -259,7 +259,7 @@ export default function Careers() {
             Life at <span className="highlight">Raynx Systems</span>
           </h1>
           <p
-            style={{ 
+            style={{
               color: "#475569",
               fontSize: "1.1rem",
               maxWidth: 850,
@@ -287,14 +287,36 @@ export default function Careers() {
             <strong>continuous upskilling</strong>. Join us to build impactful
             digital solutions while shaping the next wave of technology
             excellence.
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "0 auto", lineHeight: 1.8 }}> 
-            At <strong>Raynx Systems</strong>, we believe in empowering talent, nurturing creativity, 
-            and fostering a culture of learning. From coding challenges to hackathons, mentorship programs, and collaborative projects, 
-            we ensure that innovation and teamwork are at the heart of everything we do.
-          </p> 
-          <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: 850, margin: "20px auto 0", lineHeight: 1.8 }}> 
-            We value <strong>work-life balance</strong>, <strong>growth mindset</strong>, and <strong>continuous upskilling</strong>. 
-            Join us to build impactful digital solutions while shaping the next wave of technology excellence. 
+          </p>
+          <p
+            style={{
+              color: "#475569",
+              fontSize: "1.1rem",
+              maxWidth: 850,
+              margin: "0 auto",
+              lineHeight: 1.8,
+            }}
+          >
+            At <strong>Raynx Systems</strong>, we believe in empowering talent,
+            nurturing creativity, and fostering a culture of learning. From
+            coding challenges to hackathons, mentorship programs, and
+            collaborative projects, we ensure that innovation and teamwork are
+            at the heart of everything we do.
+          </p>
+          <p
+            style={{
+              color: "#475569",
+              fontSize: "1.1rem",
+              maxWidth: 850,
+              margin: "20px auto 0",
+              lineHeight: 1.8,
+            }}
+          >
+            We value <strong>work-life balance</strong>,{" "}
+            <strong>growth mindset</strong>, and{" "}
+            <strong>continuous upskilling</strong>. Join us to build impactful
+            digital solutions while shaping the next wave of technology
+            excellence.
           </p>
         </section>
 
@@ -324,12 +346,20 @@ export default function Careers() {
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }
+                  ></span>
+                  <span
+                    className="show-details"
+                    onClick={() =>
+                      setOpenIndex(openIndex === index ? null : index)
+                    }
                   >
-                  <span className="show-details" onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                     {openIndex === index ? "(hide details)" : "(show details)"}
                   </span>
                 </div>
-                <button className="apply-now" onClick={() => handleApplyClick(index, job.title)}>
+                <button
+                  className="apply-now"
+                  onClick={() => handleApplyClick(index, job.title)}
+                >
                   Apply Now
                 </button>
               </div>
@@ -358,9 +388,30 @@ export default function Careers() {
                 <div className="inline-form fade">
                   <h3>Apply for {selectedJob}</h3>
                   <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
-                    <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} required />
-                    <input type="tel" name="mobile" placeholder="Mobile Number" value={form.mobile} onChange={handleChange} required />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Full Name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
+                    />
+                    <input
+                      type="tel"
+                      name="mobile"
+                      placeholder="Mobile Number"
+                      value={form.mobile}
+                      onChange={handleChange}
+                      required
+                    />
                     <input
                       type="text"
                       name="driveUrl"
@@ -369,7 +420,11 @@ export default function Careers() {
                       onChange={handleChange}
                       required
                     />
-                    <button type="submit" className="apply-btn" disabled={loading}>
+                    <button
+                      type="submit"
+                      className="apply-btn"
+                      disabled={loading}
+                    >
                       {loading ? "Submitting..." : "Submit Application"}
                     </button>
                   </form>
@@ -380,8 +435,19 @@ export default function Careers() {
         </section>
 
         {/* How to Apply Section */}
-        <section className={`apply-section fade ${applyVisible ? "visible" : ""}`} style={{ textAlign: "center", marginTop: 50 }}>
-          <h2 style={{ fontFamily: "Anton, sans-serif", fontSize: "2rem", marginBottom: 12 }}>How to Apply</h2>
+        <section
+          className={`apply-section fade ${applyVisible ? "visible" : ""}`}
+          style={{ textAlign: "center", marginTop: 50 }}
+        >
+          <h2
+            style={{
+              fontFamily: "Anton, sans-serif",
+              fontSize: "2rem",
+              marginBottom: 12,
+            }}
+          >
+            How to Apply
+          </h2>
           <p style={{ maxWidth: 700, margin: "0 auto", lineHeight: 1.8 }}>
             If you’re passionate about building the future with technology, send
             your resume to{" "}
@@ -389,8 +455,13 @@ export default function Careers() {
               href="mailto:hr@raynxsystems.in"
               style={{ color: "#1d4ed8", textDecoration: "underline" }}
             >
-            If you’re passionate about building the future with technology, send your resume to{" "}
-            <a href="mailto:hr@raynxsystems.in" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
+              If you’re passionate about building the future with technology,
+              send your resume to{" "}
+            </a>
+            <a
+              href="mailto:hr@raynxsystems.in"
+              style={{ color: "#1d4ed8", textDecoration: "underline" }}
+            >
               hr@raynxsystems.in
             </a>
             .
@@ -398,7 +469,8 @@ export default function Careers() {
           <button
             className="apply-email-btn"
             onClick={() =>
-              (window.location.href = "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
+              (window.location.href =
+                "mailto:hr@raynxsystems.in?subject=Job Application - Raynx Systems")
             }
           >
             Apply via Email
