@@ -2468,14 +2468,13 @@ h6 {
     top: 100%;
     left: 0;
     right: 0;
-    background: #f0eded;
+    background: #1273b6 !important;
     flex-direction: column;
     gap: 12px;
     padding: 0 16px;
     max-height: 0;
     margin-left: -20px;
     overflow: hidden;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .nav-links.show {
@@ -2614,12 +2613,12 @@ h6 {
 }
 
 .white-card2{
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
     padding: 8px;
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 10px;
-    height: auto;
+    height: auto !important;
     background-color:#fff;
      transition: transform 1s ease-in-out;
 }
