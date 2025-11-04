@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { imageUrl } from '../utils/imageUrl'
 
 export default function Footer() {
@@ -145,16 +146,16 @@ export default function Footer() {
           </h4>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {[
-              { href: "/", label: "Home" },
-              { href: "/about", label: "About Us" },
-              { href: "/services", label: "Services" },
-              { href: "/products", label: "Products" },
-              { href: "/careers", label: "Careers" },
-              { href: "/contact", label: "Contact" },
-            ].map(({ href, label }) => (
-              <li key={href} style={{ marginBottom: "8px" }}>
-                <a
-                  href={href}
+              { to: "/", label: "Home" },
+              { to: "/about", label: "About Us" },
+              { to: "/services", label: "Services" },
+              { to: "/products", label: "Products" },
+              { to: "/careers", label: "Careers" },
+              { to: "/contact", label: "Contact" },
+            ].map(({ to, label }) => (
+              <li key={to} style={{ marginBottom: "8px" }}>
+                <Link
+                  to={to}
                   style={{
                     color: "#e2e8f0",
                     textDecoration: "none",
@@ -164,7 +165,7 @@ export default function Footer() {
                   onMouseLeave={(e) => (e.target.style.color = "#e2e8f0")}
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
