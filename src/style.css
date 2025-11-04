@@ -1652,7 +1652,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/Pictures/bluelog.png');
+  background-image: url('./assets/Pictures/bluelog.png');
   height: 100%;
   margin-bottom: 20px;
   background-repeat: no-repeat;

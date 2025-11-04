@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { imageUrl } from '../utils/imageUrl'
 import { Link } from "react-router-dom";
 import "../assets/css/styles.css";
 
@@ -39,7 +40,7 @@ export default function Services() {
               {/* <img src="/Pictures/keypr1.jfif" alt="Team collaborating on a project" className="main-image1" data-src="/Pictures/keypr1.jfif" />
               <img src="/Pictures/keypr2.jfif" alt="Team collaborating on a project" className="main-image2" data-src="/Pictures/keypr2.jfif" /> */}
               <img
-                src="../../public/Pictures/prodsand services.jpg"
+                src={imageUrl('Pictures/prodsand services.jpg')}
                 alt=""
                 className="main-image1"
               />
@@ -74,7 +75,7 @@ export default function Services() {
               </p>
             </div>
             <img
-              src="../../public/Pictures/marketanalysis.jpg"
+              src={imageUrl('Pictures/marketanalysis.jpg')}
               className="chart-content"
               alt=""
             />
@@ -103,10 +104,10 @@ export default function Services() {
                 </div>
                 <div className="business-image-wrapper">
                   <img
-                    src="/Pictures/core_IT.png"
+                    src={imageUrl('Pictures/core_IT.png')}
                     alt="Team working on software"
                     className="business-image"
-                    data-src="/Pictures/core_IT.png"
+                    data-src={imageUrl('Pictures/core_IT.png')}
                   />
                   <div className="yellow-accent"></div>
                 </div>
@@ -122,10 +123,10 @@ export default function Services() {
                 </div>
                 <div className="business-image-wrapper">
                   <img
-                    src="/Pictures/businessmodel.png"
+                    src={imageUrl('Pictures/businessmodel.png')}
                     alt="Freelancer collaborating"
                     className="business-image"
-                    data-src="/Pictures/businessmodel.png"
+                    data-src={imageUrl('Pictures/businessmodel.png')}
                   />
                   <div className="yellow-accent"></div>
                 </div>
@@ -219,7 +220,7 @@ export default function Services() {
         <h2>Service Categories</h2>
         <div className="service-categories-grid">
           <div className="white-card">
-            <img src="../../public/Pictures/productdevelopment.jpg" alt="" />
+            <img src={imageUrl('Pictures/productdevelopment.jpg')} alt="" />
             <h3>Product Development</h3>
             <p>
               Custom software, web apps, and mobile apps, built end-to-end with
@@ -227,7 +228,7 @@ export default function Services() {
             </p>
           </div>
           <div className="white-card">
-            <img src="../../public/Pictures/it consulting.jpg" alt="" />
+            <img src={imageUrl('Pictures/it consulting.jpg')} alt="" />
             <h3>IT Consulting</h3>
 
             <p>
@@ -236,7 +237,7 @@ export default function Services() {
             </p>
           </div>
           <div className="white-card">
-            <img src="../../public/Pictures/cloudadndevops.jpg" alt="" />
+            <img src={imageUrl('Pictures/cloudadndevops.jpg')} alt="" />
             <h3>Cloud & DevOps</h3>
             <p>
               Deployment, monitoring, automation, CI/CD pipelines, and
@@ -246,7 +247,7 @@ export default function Services() {
 
           <div className="white-card">
             <img
-              src="../../public/Pictures/maintenance and support.jpeg"
+              src={imageUrl('Pictures/maintenance and support.jpeg')}
               alt=""
             />
             <h3>Maintenance & Support</h3>
@@ -316,16 +317,16 @@ export default function Services() {
             <strong>Frontend</strong>
             <ol>
               <li>
-                <img src="../../public/Pictures/react.jpg" alt="" />
+                <img src={imageUrl('Pictures/react.jpg')} alt="" />
                 <p>React js</p>
               </li>
               <li>
-                <img src="../../public/Pictures/nextjs.jpg" alt="" />
+                <img src={imageUrl('Pictures/nextjs.jpg')} alt="" />
                 <p>Next js</p>
               </li>
 
               <li>
-                <img src="../../public/Pictures/tailwindcss.jpg" alt="" />
+                <img src={imageUrl('Pictures/tailwindcss.jpg')} alt="" />
                 <p>Tailwind css</p>
               </li>
             </ol>
@@ -335,21 +336,21 @@ export default function Services() {
             <strong>Backend</strong>
             <ol>
               <li>
-                <img src="../../public/Pictures/java.jpg" alt="" />
+                <img src={imageUrl('Pictures/java.jpg')} alt="" />
                 <p>Java</p>
               </li>
               <li>
-                <img src="../../public/Pictures/springboot.jpg" alt="" />
+                <img src={imageUrl('Pictures/springboot.jpg')} alt="" />
                 <p>SpringBoot</p>
               </li>
 
               <li>
-                <img src="../../public/Pictures/django.jpg" alt="" />
+                <img src={imageUrl('Pictures/django.jpg')} alt="" />
                 <p>Django</p>
               </li>
 
               <li>
-                <img src="../../public/Pictures/expressjs.jpg" alt="" />
+                <img src={imageUrl('Pictures/expressjs.jpg')} alt="" />
                 <p>Express js</p>
               </li>
 
@@ -364,16 +365,16 @@ export default function Services() {
             <strong>Database</strong>
             <ol>
               <li>
-                <img src="../../public/Pictures/postgresql.jpg" alt="" />
+                <img src={imageUrl('Pictures/postgresql.jpg')} alt="" />
                 <p>PostgreSQL</p>
               </li>
               <li>
-                <img src="../../public/Pictures/mysql.jpg" alt="" />
+                <img src={imageUrl('Pictures/mysql.jpg')} alt="" />
                 <p>MySQL</p>
               </li>
 
               <li>
-                <img src="../../public/Pictures/mongodb.jpg" alt="" />
+                <img src={imageUrl('Pictures/mongodb.jpg')} alt="" />
                 <p>MongoDB</p>
               </li>
             </ol>
@@ -382,20 +383,20 @@ export default function Services() {
             <strong>Cloud & DevOps</strong>
             <ol>
               <li>
-                <img src="../../public/Pictures/aws.jpg" alt="" />
+                <img src={imageUrl('Pictures/aws.jpg')} alt="" />
                 <p>AWS</p>
               </li>
               <li>
-                <img src="../../public/Pictures/docker.png" alt="" />
+                <img src={imageUrl('Pictures/docker.png')} alt="" />
                 <p>Docker</p>
               </li>
 
               <li>
-                <img src="../../public/Pictures/kubernets.png" alt="" />
+                <img src={imageUrl('Pictures/kubernets.png')} alt="" />
                 <p>Kubernetes</p>
               </li>
               <li>
-                <img src="../../public/Pictures/cicd.png" alt="" />
+                <img src={imageUrl('Pictures/cicd.png')} alt="" />
                 <p>CI/CD</p>
               </li>
             </ol>
@@ -407,7 +408,7 @@ export default function Services() {
             <strong>AI & Data</strong>
             <ol>
               <li>
-                <img src="../../public/Pictures/python.png" alt="" />
+                <img src={imageUrl('Pictures/python.png')} alt="" />
                 <p>Python</p>
               </li>
               <li>

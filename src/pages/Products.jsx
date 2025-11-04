@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { imageUrl } from '../utils/imageUrl'
 
 export default function Products() {
   const [scrollY, setScrollY] = useState(0);
@@ -20,31 +21,31 @@ export default function Products() {
     {
       title: "Smart Retail Inventory & POS System",
       desc: "Role-based dashboards for Admin, Manager, and Cashier; manage POS, inventory, suppliers, and reports seamlessly.",
-      img: "/Pictures/smart.jpg",
+      img: imageUrl('Pictures/smart.jpg'),
       to: "/projects/smart-retail",
     },
     {
       title: "Customer Support Ticketing System",
       desc: "Efficient ticketing with role-based dashboards for Admin, User, and Support; integrated knowledge base.",
-      img: "/Pictures/customer.webp",
+      img: imageUrl('Pictures/customer.webp'),
       to: "/projects/customer-support-ticketing",
     },
     {
       title: "Workflow Automation Suite",
       desc: "Automate routine operations with customizable workflows and integrations.",
-      img: "/Pictures/keypr1.jfif",
+      img: imageUrl('Pictures/keypr1.jfif'),
       to: "#",
     },
     {
       title: "Analytics Dashboard",
       desc: "Track KPIs and gain insights with real-time charts and role-based access.",
-      img: "/Pictures/keypr2.jfif",
+      img: imageUrl('Pictures/keypr2.jfif'),
       to: "#",
     },
     {
       title: "NLP Utilities",
       desc: "Reusable AI components for search, summarization, and classification.",
-      img: "/Pictures/businessmodel.png",
+      img: imageUrl('Pictures/businessmodel.png'),
       to: "#",
     },
     

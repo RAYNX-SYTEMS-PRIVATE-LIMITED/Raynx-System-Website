@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { imageUrl } from '../utils/imageUrl'
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ export default function Footer() {
               }}
             ></span>
             <img
-              src="/Pictures/bluelogo.png"
+              src={imageUrl('Pictures/bluelogo.png')}
               alt="Raynx Systems Logo"
               className="footer-logo"
               style={{ height: "70px", width: "auto", marginRight: "12px" ,border: "#0F435A"}}

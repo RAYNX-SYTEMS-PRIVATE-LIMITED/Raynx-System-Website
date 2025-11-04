@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../assets/css/styles.css';
+import { imageUrl } from '../utils/imageUrl'
 
 
 
@@ -32,7 +33,7 @@ export default function Header() {
                 
               </span>
               <img
-                src="/Pictures/bluelogo.png"
+                src={imageUrl('Pictures/bluelogo.jpg')}
                 alt="Raynx Systems Logo"
                 className="logo-image"
               /> 

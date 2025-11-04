@@ -1,4 +1,5 @@
 import React from "react";
+import { imageUrl } from '../utils/imageUrl'
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -38,7 +39,7 @@ export default function About() {
           }}
         >
           <img
-            src="/Pictures/newimage1.jpg"
+            src={imageUrl('Pictures/newimage1.jpg')}
             alt="Team working"
             style={{
               width: "100%",
@@ -317,7 +318,7 @@ export default function About() {
           }}
         >
           <img
-            src="/Pictures/valueimg.jpg"
+            src={imageUrl('Pictures/valueimg.jpg')}
             alt="Company Meeting"
             style={{
               width: "100%",
@@ -393,7 +394,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/chander_ceo.jpg"
+              src={imageUrl('gallery/chander_ceo.jpg')}
               alt="CEO and Founder"
               style={{
                 width: "100%",
@@ -466,7 +467,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/tirupathi goud.jpg"
+              src={imageUrl('gallery/tirupathi goud.jpg')}
               alt="Director – Administration"
               style={{
                 width: "100%",
@@ -539,7 +540,7 @@ export default function About() {
         >
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
-              src="/gallery/venkanna_director.jpg"
+              src={imageUrl('gallery/venkanna_director.jpg')}
               alt="Director – Finance"
               style={{
                 width: "100%",
@@ -602,34 +603,34 @@ export default function About() {
         <div className="scroll-gallery">
           <div className="scroll-track">
             <img
-              src="/gallery/image1.jpg"
+              src={imageUrl('gallery/image1.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image1.jpg"
+              data-src={imageUrl('gallery/image1.jpg')}
             />
             <img
-              src="/gallery/image10.jpeg"
+              src={imageUrl('gallery/image10.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image10.jpeg"
+              data-src={imageUrl('gallery/image10.jpeg')}
             />
             <img
-              src="/gallery/image11.jpeg"
+              src={imageUrl('gallery/image11.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image11.jpeg"
+              data-src={imageUrl('gallery/image11.jpeg')}
             />
             <img
-              src="/gallery/image4.jpg"
+              src={imageUrl('gallery/image4.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image4.jpg"
+              data-src={imageUrl('gallery/image4.jpg')}
             />
             <img
-              src="/gallery/image7.jpg"
+              src={imageUrl('gallery/image7.jpg')}
               alt="Team Photo"
-              data-src="/gallery/image7.jpg"
+              data-src={imageUrl('gallery/image7.jpg')}
             />
             <img
-              src="/gallery/image10.jpeg"
+              src={imageUrl('gallery/image10.jpeg')}
               alt="Team Photo"
-              data-src="/gallery/image10.jpeg"
+              data-src={imageUrl('gallery/image10.jpeg')}
             />
           </div>
         </div>
