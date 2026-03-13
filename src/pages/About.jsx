@@ -395,7 +395,7 @@ export default function About() {
           <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
               src={imageUrl('gallery/chander_ceo.jpg')}
-              alt="CEO and Founder"
+              alt="CEO"
               style={{
                 width: "100%",
                 maxWidth: 320,
@@ -427,7 +427,7 @@ export default function About() {
               Building smart solutions that power tomorrow.
             </blockquote>
             <p style={{ color: "#334155", textAlign: "justify" }}>
-              At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>Founder and CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
+              At the heart of Raynx Systems Pvt. Ltd. is <b>Pathlavath Chender</b>, a visionary leader driven by a passion for innovation and technology. As the <b>CEO</b>, Chender leads the company with a clear mission — to empower businesses through smart, scalable, and transformative digital solutions.</p>
 
             <p style={{ color: "#334155", textAlign: "justify" }}>Under his leadership, Raynx Systems has evolved into a trusted technology partner for enterprises seeking custom software development, digital transformation, and data-driven insights. His deep expertise in Artificial Intelligence (AI), Cloud Computing, Power BI, and Tableau continues to inspire our teams to deliver solutions that are not only innovative but also impactful and accessible to all.</p>
 
