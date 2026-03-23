@@ -376,7 +376,7 @@ export default function About() {
         </h2>
 
         {/* Profile: CEO */}
-        <motion.div
+        {/* <motion.div
           className="profile-row"
           style={{
             display: "grid",
@@ -411,7 +411,7 @@ export default function About() {
               <p style={{ marginTop: 4, color: "#475569" }}>
                 FOUNDER & CEO   </p>
               {/* <p style={{ marginTop: 4, color: "#475569" }}>Raynx Systems Pvt. Ltd.
-              </p> */}
+              </p> 
             </div>
           </div>
           <div className="profile-text">
@@ -444,7 +444,7 @@ export default function About() {
               </a>
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
 
 
 
