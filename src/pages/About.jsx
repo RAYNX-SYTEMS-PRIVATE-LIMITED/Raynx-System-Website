@@ -465,7 +465,7 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="profile-photo" style={{ textAlign: "center" }}>
+          {/* <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
               src={imageUrl('gallery/tirupathi goud.jpg')}
               alt="Director – Administration"
@@ -483,7 +483,7 @@ export default function About() {
               </h3>
               <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
             </div>
-          </div>
+          </div> */}
           <div className="profile-text">
             <blockquote
               style={{
@@ -497,7 +497,7 @@ export default function About() {
               We’re not just a team — we’re a force for progress.
             </blockquote>
             <p style={{ color: "#334155", textAlign: "justify" }}>
-              At the core of Raynx Systems Pvt. Ltd. stands <b>Mr. Ambati Thirupathi Goud</b>, a dynamic leader whose strategic vision and commitment to excellence continue to shape the company’s growth and innovation. As the <b>Director</b>, he provides decisive leadership, ensuring seamless operational governance, effective policy formulation, and cohesive inter-departmental collaboration across the organization.
+              At the core of Raynx Systems Pvt. Ltd. stands <b>Mr. Ramesh Perapaka </b>, a dynamic leader whose strategic vision and commitment to excellence continue to shape the company’s growth and innovation. As the <b>Director</b>, he provides decisive leadership, ensuring seamless operational governance, effective policy formulation, and cohesive inter-departmental collaboration across the organization.
             </p>
 
             <p style={{ color: "#334155", textAlign: "justify" }}>
@@ -505,10 +505,10 @@ export default function About() {
             </p>
 
             <p style={{ color: "#334155", textAlign: "justify" }}>
-              With a leadership philosophy rooted in empowerment and sustainability, Mr. Goud ensures that every initiative at Raynx Systems aligns with its mission to engineer and deliver market-leading technological solutions. His strategic foresight continues to position the company as a benchmark for innovation, operational excellence, and long-term industry leadership.
+              With a leadership philosophy rooted in empowerment and sustainability, Mr. Ramesh ensures that every initiative at Raynx Systems aligns with its mission to engineer and deliver market-leading technological solutions. His strategic foresight continues to position the company as a benchmark for innovation, operational excellence, and long-term industry leadership.
             </p>
 
-            <p style={{ marginTop: 12 }}>
+            {/* <p style={{ marginTop: 12 }}>
               <a
                 href="https://www.linkedin.com/in/ambati-thirupathi-goud-0b7a7b1b3/"
                 className="primary-btn"
@@ -517,7 +517,7 @@ export default function About() {
               >
                 Connect on LinkedIn
               </a>
-            </p>
+            </p> */}
           </div>
         </motion.div>
 
@@ -538,7 +538,7 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="profile-photo" style={{ textAlign: "center" }}>
+          {/* <div className="profile-photo" style={{ textAlign: "center" }}>
             <img
               src={imageUrl('gallery/venkanna_director.jpg')}
               alt="Director – Finance"
@@ -556,7 +556,7 @@ export default function About() {
               </h3>
               <p style={{ marginTop: 4, color: "#475569" }}>DIRECTOR</p>
             </div>
-          </div>
+          </div> */}
           <div className="profile-text">
             <blockquote
               style={{
@@ -573,7 +573,7 @@ export default function About() {
             </blockquote>
             <p style={{ color: "#334155", textAlign: "justify" }}>
               With a deep understanding of IT infrastructure and services, <b>Mr.
-                Venkanna</b> has played a key role in driving growth and shaping
+                Srikanth Bathuka</b> has played a key role in driving growth and shaping
               business strategy. He focuses on financial leadership, operational
               efficiency, and building sustainable, long-term value.
             </p>
@@ -582,7 +582,7 @@ export default function About() {
               learning—bringing balance and discipline to his leadership
               approach.
             </p>
-            <p style={{ marginTop: 12 }}>
+            {/* <p style={{ marginTop: 12 }}>
               <a
                 href="https://www.linkedin.com/in/venkanna-boda-38081037a/"
                 className="primary-btn"
@@ -591,7 +591,7 @@ export default function About() {
               >
                 Connect on LinkedIn
               </a>
-            </p>
+            </p> */}
           </div>
         </motion.div>
       </section>
